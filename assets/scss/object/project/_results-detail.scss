@@ -1,0 +1,985 @@
+@use '../../common/var' as var;
+@use '../../common/mixin' as m;
+
+/* =================================================================
+====================================================================
+================================================================= */
+@include m.mq(sps) {
+    .info-player-wrapper {
+        display: grid;
+        grid-template:
+            "grid-info"
+            "bb-background"
+            "grid-game"
+            /1fr;
+        .info-player {
+            grid-area: "grid-info";
+            display: grid;
+            grid-template:
+                "left"
+                "right";
+            grid-template-columns: 1fr;
+            .player-photo {
+                grid-area: left;
+                width: 50%;
+                margin: auto;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .player-commons {
+                grid-area: right;
+                margin-top: 20px;
+                .commons-title {
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    padding: 0 0 10px 20px;
+                }
+                .commons-value {
+                    display: flex;
+                    align-items: center;
+                    padding: 5px 0 0 20px;
+                    line-height: 1.6;
+                    .label {
+                        line-height: inherit;
+                        font-size: inherit;
+                        white-space: nowrap;
+                        color: var.$blue-grey;
+                    }
+                    .value {
+                        line-height: inherit;
+                        font-size: inherit;
+                    }
+                }
+            }
+        }
+        .card-game {
+            grid-area: "grid-game";
+            background: var.$white;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 20px 10px;
+            .game-title {
+                background: var.$blue-grey-lighten-4;
+                border-radius: 5px;
+                padding: 10px 20px;
+                .title-stadium {
+                    display: block;
+                    font-size: 0.9rem;
+                    margin-top: 10px;
+                }
+            }
+            .game-grid {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+                .score-grid {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 3fr 1fr;
+                    grid-template-rows: 40px 40px;
+                    column-gap: 10px;
+                    border-bottom: solid 1px var.$blue-grey-lighten-4;
+                    .inning {
+                        grid-area: "inning";
+                        grid-column: 1/2;
+                        grid-row: 1/3;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        font-weight: bold;
+                    }
+                    .team-top {
+                        grid-column: 2/3;
+                        grid-row: 1/2;
+                        grid-area: "team-top";
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        font-weight: bold;
+                        padding-left: 10px;
+                    }
+                    .score-top {
+                        grid-column: 3/4;
+                        grid-row: 1/2;
+                        grid-area: "score-top";
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        padding-right: 20px;
+                    }
+                    .team-bottom {
+                        grid-column: 2/3;
+                        grid-row: 2/2;
+                        grid-area: "team-bottom";
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        font-weight: bold;
+                        padding-left: 10px;
+                    }
+                    .score-bottom {
+                        grid-column: 3/4;
+                        grid-row: 2/3;
+                        grid-area: "score-bottom";
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        padding-right: 20px;
+                    }
+                    .team-area {
+                        font-weight: normal;
+                        font-size: 0.9rem;
+                        margin-left: 10px;
+                        color: var.$blue-grey-darken-2;
+                    }
+                }
+                .status-grid {
+                    display: grid;
+                    .status-info {
+                        padding: 0 20px 10px;
+                    }
+                    .status-results {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        padding: 0 20px 10px;
+                        dd {
+                            font-weight: bold;
+                            font-size: 0.9rem;
+                            border-radius: 2px;
+                            white-space: nowrap;
+                            padding: 5px 15px;
+                            &.hit {
+                                color: var.$white;
+                                background: var.$light-blue;
+                            }
+                            &.out {
+                                color: inherit;
+                                font-weight: normal;
+                                background: var.$grey-lighten-3;
+                            }
+                            &.bb {
+                                color: var.$white;
+                                background: var.$green;
+                            }
+                            &.long-hit {
+                                color: var.$white;
+                                background: var.$orange;
+                            }
+                            &.sac {
+                                color: var.$white;
+                                background: var.$grey;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bb-background {
+            margin-left: 80px;
+            dt {
+                margin: 20px 0 10px 20px;
+                position: relative;
+                &:before {
+                    top: -30%;
+                    left: -80px;
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 70px;
+                    background: var.$white;
+                    font-size: 0.8rem;
+                    border-radius: 4px;
+                    padding: 8px 10px 4px;
+                }
+                .area {
+                    font-weight: normal;
+                    font-size: 0.9rem;
+                }
+                &.ps {
+                    &:before {
+                        content: '小学校';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.jhs {
+                    &:before {
+                        content: '中学校';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.hs {
+                    &:before {
+                        content: '高校';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.unv {
+                    &:before {
+                        content: '大学';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.soc {
+                    &:before {
+                        content: '社会人';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.pro {
+                    &:before {
+                        content: '独立';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.npb {
+                    &:before {
+                        content: 'NPB';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+            }
+            dd {
+                margin: 10px 0 10px 40px;
+                font-size: 0.9rem;
+                color: var.$blue-grey;
+            }
+        }
+    }
+
+    .page-nav-wrapper {
+        margin-top: 40px;
+        .page-nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            .nav-item {
+                font-weight: bold;
+                padding: 10px 20px;
+                border-bottom: solid 4px var.$grey-lighten-2;
+            }
+        }
+        .anchor {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px;
+            .anchor-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 32px;
+                height: 32px;
+                font-weight: bold;
+                border-radius: 50%;
+                background: var.$white;
+                &:last-child {
+                    width: 72px;
+                    border-radius: 16px;
+                }
+            }
+        }
+    }
+}
+
+/* =================================================================
+====================================================================
+================================================================= */
+@include m.mq(pc) {
+    .info-player-wrapper {
+        display: grid;
+        grid-template:
+            "grid-info grid-game"
+            /1fr 1fr;
+        .info-player {
+            grid-area: "grid-info";
+            display: grid;
+            grid-template:
+                "left right";
+            grid-template-columns: 200px 1fr;
+            .player-photo {
+                grid-area: left;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .player-commons {
+                grid-area: right;
+                .commons-title {
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    padding: 0 0 10px 20px;
+                }
+                .commons-value {
+                    display: flex;
+                    align-items: center;
+                    padding: 5px 0 0 20px;
+                    line-height: 1.6;
+                    .label {
+                        line-height: inherit;
+                        font-size: inherit;
+                        white-space: nowrap;
+                        color: var.$blue-grey;
+                    }
+                    .value {
+                        line-height: inherit;
+                        font-size: inherit;
+                    }
+                }
+            }
+        }
+        .card-game {
+            grid-area: "grid-game";
+            width: 100%;
+            background: var.$white;
+            border-radius: 10px;
+            padding: 5px;
+            .game-title {
+                background: var.$blue-grey-lighten-4;
+                border-radius: 5px;
+                padding: 10px 20px;
+                .title-stadium {
+                    display: block;
+                    font-size: 0.9rem;
+                    margin-top: 10px;
+                }
+            }
+            .game-grid {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+                .score-grid {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 80px 1fr 1fr;
+                    grid-template-rows: 40px 40px;
+                    column-gap: 10px;
+                    .inning {
+                        grid-area: "inning";
+                        grid-column: 1/2;
+                        grid-row: 1/3;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        font-weight: bold;
+                    }
+                    .team-top {
+                        grid-column: 2/3;
+                        grid-row: 1/2;
+                        grid-area: "team-top";
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        font-weight: bold;
+                        padding-left: 40px;
+                    }
+                    .score-top {
+                        grid-column: 3/4;
+                        grid-row: 1/2;
+                        grid-area: "score-top";
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        padding-right: 40px;
+                    }
+                    .team-bottom {
+                        grid-column: 2/3;
+                        grid-row: 2/2;
+                        grid-area: "team-bottom";
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        font-weight: bold;
+                        padding-left: 40px;
+                    }
+                    .score-bottom {
+                        grid-column: 3/4;
+                        grid-row: 2/3;
+                        grid-area: "score-bottom";
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        padding-right: 40px;
+                    }
+                    .team-area {
+                        font-weight: normal;
+                        font-size: 0.9rem;
+                        margin-left: 10px;
+                        color: var.$blue-grey-darken-2;
+                    }
+                }
+                .status-grid {
+                    display: grid;
+                    .status-info {
+                        padding: 0 20px 10px;
+                    }
+                    .status-results {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 10px;
+                        padding: 0 20px 10px;
+                        dd {
+                            font-weight: bold;
+                            font-size: 0.9rem;
+                            border-radius: 2px;
+                            padding: 5px 15px;
+                            &.hit {
+                                color: var.$white;
+                                background: var.$light-blue;
+                            }
+                            &.out {
+                                color: inherit;
+                                font-weight: normal;
+                                background: var.$grey-lighten-3;
+                            }
+                            &.bb {
+                                color: var.$white;
+                                background: var.$green;
+                            }
+                            &.long-hit {
+                                color: var.$white;
+                                background: var.$orange;
+                            }
+                            &.sac {
+                                color: var.$white;
+                                background: var.$grey;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bb-background {
+            grid-area: "bb-background";
+            dt {
+                margin: 20px 0 10px 20px;
+                position: relative;
+                &:before {
+                    top: -30%;
+                    left: -80px;
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 70px;
+                    background: var.$white;
+                    font-size: 0.8rem;
+                    border-radius: 4px;
+                    padding: 8px 10px 4px;
+                }
+                .area {
+                    font-weight: normal;
+                    font-size: 0.9rem;
+                }
+                &.ps {
+                    &:before {
+                        content: '小学校';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.jhs {
+                    &:before {
+                        content: '中学校';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.hs {
+                    &:before {
+                        content: '高校';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.unv {
+                    &:before {
+                        content: '大学';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.soc {
+                    &:before {
+                        content: '社会人';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.pro {
+                    &:before {
+                        content: '独立';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.npb {
+                    &:before {
+                        content: 'NPB';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+            }
+            dd {
+                margin: 10px 0 10px 40px;
+                font-size: 0.9rem;
+                color: var.$blue-grey;
+            }
+        }
+    }
+    .info-team-wrapper {
+        display: grid;
+        grid-template:
+            "grid-info grid-game"
+            /2fr 1fr;
+        .info-team {
+            grid-area: "grid-info";
+            display: grid;
+            grid-template:
+                "left right";
+            grid-template-columns: 200px 1fr;
+            .team-photo {
+                grid-area: left;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .team-commons {
+                grid-area: right;
+                .commons-title {
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    padding: 0 0 10px 20px;
+                }
+                .commons-value {
+                    display: flex;
+                    align-items: center;
+                    padding: 5px 0 0 20px;
+                    line-height: 1.6;
+                    .label {
+                        line-height: inherit;
+                        font-size: inherit;
+                        white-space: nowrap;
+                        color: var.$blue-grey;
+                    }
+                    .value {
+                        line-height: inherit;
+                        font-size: inherit;
+                    }
+                }
+            }
+        }
+        .card-game {
+            grid-area: "grid-game";
+            width: 100%;
+            background: var.$white;
+            border-radius: 10px;
+            padding: 5px;
+            .game-title {
+                background: var.$blue-grey-lighten-4;
+                border-radius: 5px;
+                padding: 10px 20px;
+                .title-stadium {
+                    display: block;
+                    font-size: 0.9rem;
+                    margin-top: 10px;
+                }
+            }
+            .game-grid {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+                .score-grid {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 80px 1fr 1fr;
+                    grid-template-rows: 40px 40px;
+                    column-gap: 10px;
+                    .inning {
+                        grid-area: "inning";
+                        grid-column: 1/2;
+                        grid-row: 1/3;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        font-weight: bold;
+                    }
+                    .team-top {
+                        grid-column: 2/3;
+                        grid-row: 1/2;
+                        grid-area: "team-top";
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        font-weight: bold;
+                        padding-left: 40px;
+                    }
+                    .score-top {
+                        grid-column: 3/4;
+                        grid-row: 1/2;
+                        grid-area: "score-top";
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        padding-right: 40px;
+                    }
+                    .team-bottom {
+                        grid-column: 2/3;
+                        grid-row: 2/2;
+                        grid-area: "team-bottom";
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        font-weight: bold;
+                        padding-left: 40px;
+                    }
+                    .score-bottom {
+                        grid-column: 3/4;
+                        grid-row: 2/3;
+                        grid-area: "score-bottom";
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        padding-right: 40px;
+                    }
+                    .team-area {
+                        font-weight: normal;
+                        font-size: 0.9rem;
+                        margin-left: 10px;
+                        color: var.$blue-grey-darken-2;
+                    }
+                }
+                .status-grid {
+                    display: grid;
+                    .status-info {
+                        padding: 0 20px 10px;
+                    }
+                    .status-results {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 10px;
+                        padding: 0 20px 10px;
+                        dd {
+                            font-weight: bold;
+                            font-size: 0.9rem;
+                            border-radius: 2px;
+                            padding: 5px 15px;
+                            &.hit {
+                                color: var.$white;
+                                background: var.$light-blue;
+                            }
+                            &.out {
+                                color: inherit;
+                                font-weight: normal;
+                                background: var.$grey-lighten-3;
+                            }
+                            &.bb {
+                                color: var.$white;
+                                background: var.$green;
+                            }
+                            &.long-hit {
+                                color: var.$white;
+                                background: var.$orange;
+                            }
+                            &.sac {
+                                color: var.$white;
+                                background: var.$grey;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bb-background {
+            grid-area: "bb-background";
+            dt {
+                margin: 20px 0 10px 20px;
+                position: relative;
+                &:before {
+                    top: -30%;
+                    left: -80px;
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 70px;
+                    background: var.$white;
+                    font-size: 0.8rem;
+                    border-radius: 4px;
+                    padding: 8px 10px 4px;
+                }
+                .area {
+                    font-weight: normal;
+                    font-size: 0.9rem;
+                }
+                &.ps {
+                    &:before {
+                        content: '小学校';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.jhs {
+                    &:before {
+                        content: '中学校';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.hs {
+                    &:before {
+                        content: '高校';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.unv {
+                    &:before {
+                        content: '大学';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.soc {
+                    &:before {
+                        content: '社会人';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.pro {
+                    &:before {
+                        content: '独立';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.npb {
+                    &:before {
+                        content: 'NPB';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+            }
+            dd {
+                margin: 10px 0 10px 40px;
+                font-size: 0.9rem;
+                color: var.$blue-grey;
+            }
+        }
+    }
+    .acc-card {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 80px;
+        grid-template-rows: 30px 30px;
+        border-radius: 10px;
+        background: white;
+        padding: 10px;
+        margin: 20px auto;
+        .subtitle {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var.$blue-grey;
+            padding-left: 20px;
+        }
+        .title {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            padding-left: 20px;
+        }
+        .arrow {
+            grid-column: 2/3;
+            grid-row: 1/3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .page-nav-wrapper {
+        margin-top: 40px;
+        .page-nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background: var.$white;
+            border-radius: 8px 8px 0 0;
+            gap: 20px;
+            .nav-item {
+                font-weight: bold;
+                padding: 20px 20px;
+                border-bottom: solid 4px var.$grey-lighten-2;
+            }
+        }
+        .anchor {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background: rgba(var.$blue-grey, 0.1);
+            border-radius: 0 0 8px 8px;
+            box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+            padding: 15px 0 10px;
+            gap: 20px;
+            &.player {
+                .anchor-item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 32px;
+                    height: 32px;
+                    font-weight: bold;
+                    border-radius: 50%;
+                    background: var.$white;
+                    &:last-child {
+                        width: 72px;
+                        border-radius: 16px;
+                    }
+                }
+            }
+            &.team {
+                .anchor-item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    min-width: 120px;
+                    width: auto;
+                    height: 32px;
+                    font-weight: bold;
+                    border-radius: 8px;
+                    color: var.$white;
+                    padding: 5px 10px;
+                }
+            }
+        }
+        .cup-select {
+            position: relative;
+            max-width: 400px;
+            &:after {
+                content: '';
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                top: 30px;
+                right: 16px;
+                border-bottom: solid 3px var.$blue-grey-lighten-3;
+                border-right: solid 3px var.$blue-grey-lighten-3;
+                transform: rotate(45deg);
+            }
+            select {
+                width: 100%;
+                background: var.$white;
+                border-radius: 4px;
+                font-size: 1.1rem;
+                padding: 10px 80px 10px 20px;
+                margin: 20px 0;
+                option {
+                    background: var.$white;
+                }
+            }
+        }
+    }
+    .card-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        .list-item {
+            padding: 20px 20px 15px;
+            border: solid 1px var.$blue-grey-lighten-3;
+            &.ob-pro {
+                background: var.$white;
+                border-radius: 8px;
+                span {
+                    display: block;
+                    font-size: 0.75rem;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .stats-nav-wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        margin-left: 20px;
+        .stats-menu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .stats-menu-index {
+                color: var.$blue-grey;
+                min-width: 80px;
+                text-align: right;
+            }
+            .stats-menu-list {
+                margin-left: 20px;
+                ul {
+                    display: flex;
+                    column-gap: 20px;
+                    .list-item {
+                        min-width: 200px;
+                        text-align: center;
+                        white-space: nowrap;
+                        &:hover {
+                        }
+                        a {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 8px;
+                            filter: drop-shadow(0px 0px 4px rgba(var.$blue-grey, 0.4));
+                            padding: 10px;
+                            &:link,
+                            &:visited {
+                                background: var.$white;
+                            }
+                            &:hover {
+                                background: var.$blue-accent-1;
+                                color: var.$white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@use '../../common/var' as var;
+@use '../../common/mixin' as m;
+
+@include m.mq(sps) {
+    .p {
+        &-result {
+            display: grid;
+            column-gap: 40px;
+            row-gap: 20px;
+            width: 100%;
+            max-width: 90vw;
+            margin: 20px auto;
+            &__block {
+                &--info {
+                    display: grid;
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+                &--game {
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 20px;
+                }
+            }
+        }
+    }
+}
+@include m.mq(pc) {
+    .p {
+        &-result {
+            display: grid;
+            column-gap: 40px;
+            max-width: 90vw;
+            margin: 20px auto;
+            &__block {
+                &--info {
+                    display: grid;
+                    grid-column: 1/2;
+                }
+                &--game {
+                    grid-column: 2/3;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 20px;
+                }
+            }
+        }
+        &-result--player {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            column-gap: 40px;
+            max-width: 90vw;
+            margin: 20px auto;
+            &__block {
+                &--info {
+                    display: grid;
+                    grid-column: 1/2;
+                }
+                &--game {
+                    grid-column: 2/3;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 20px;
+                }
+            }
+        }
+    }
+}

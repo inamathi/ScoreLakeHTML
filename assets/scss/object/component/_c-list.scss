@@ -1,0 +1,47 @@
+@use '../../common/var' as var;
+
+.c {
+    &-list {
+        background: var.$white;
+        filter:drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+        border-radius: 8px;
+        padding: 20px 20px 15px;
+        &__card {
+            display: flex;
+            flex-direction: row;
+            column-gap: 20px;
+            .item {
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+                padding: 15px 20px 10px;
+                border-radius: 8px;
+                border: solid 1px var.$blue-grey-lighten-3;
+                background: var.$white;
+                .primary {
+                    font-weight: bold;
+                    font-size: 1rem;
+                    text-align: center;
+                }
+                .secondary {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+        &__tag {
+            display: flex;
+            flex-direction: row;
+            column-gap: 20px;
+            .item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 10px;
+                border-radius: 8px;
+                border: solid 1px var.$blue-grey-lighten-3;
+                background: var.$white;
+                padding: 10px 20px;
+            }
+        }
+    }
+}

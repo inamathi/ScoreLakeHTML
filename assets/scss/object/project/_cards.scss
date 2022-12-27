@@ -1,0 +1,93 @@
+@use '../../common/var' as var;
+@use '../../common/mixin' as m;
+
+@include m.mq(sps) {
+    .topix-wrapper {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        padding: 0 20px;
+        overflow-x: scroll;
+        .topix-item {
+            &--top {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                row-gap: 10px;
+                min-width: 300px;
+                width: 100%;
+                border: solid 1px var.$grey-lighten-5;
+                border-radius: 8px;
+                background: var.$grey-lighten-5;
+                padding: 20px;
+                .item {
+                    &-img {
+                        margin-bottom: 10px;
+                    }
+                    &-title {
+                        font-weight: bold;
+                        color: var.$blue-grey;
+                    }
+                    &-subtitle {
+                        font-weight: bold;
+                        font-size: 0.9rem;
+                        color: var.$blue-grey;
+                        &--add {
+                            color: var.$grey-darken-4;
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* =================================================================
+====================================================================
+================================================================= */
+@include m.mq(pc) {
+    .topix-wrapper {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 20px;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 40px;
+        overflow-x: scroll;
+        .topix-item {
+            &--top {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                row-gap: 10px;
+                width: 100%;
+                max-width: 320px;
+                border: solid 1px var.$grey-lighten-5;
+                border-radius: 8px;
+                background: var.$grey-lighten-5;
+                padding: 20px;
+                margin: 0 auto;
+                .item {
+                    &-img {
+                        margin-bottom: 10px;
+                    }
+                    &-title {
+                        font-weight: bold;
+                        color: var.$blue-grey;
+                    }
+                    &-subtitle {
+                        font-weight: bold;
+                        font-size: 0.9rem;
+                        color: var.$blue-grey;
+                        &--add {
+                            color: var.$grey-darken-4;
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

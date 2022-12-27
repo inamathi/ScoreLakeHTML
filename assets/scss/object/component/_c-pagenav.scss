@@ -1,0 +1,186 @@
+@use '../../common/var' as var;
+@use '../../common/mixin' as m;
+
+@include m.mq(sps) {
+    .c {
+        &-pagenav {
+            &__block {
+                &--primary {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    column-gap: 10px;
+                    overflow-x: scroll;
+                    .item {
+                        white-space: nowrap;
+                        font-size: 0.9rem;
+                        a {
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            font-weight: bold;
+                            font-size: inherit;
+                            background: var.$white;
+                            border-bottom: solid 4px var.$grey-lighten-3;
+                            padding: 10px;
+                            margin-bottom: 20px;
+                            &:link,
+                            &:visited {
+                            transition: all 0.0s ease;
+                            }
+                            &:hover {
+                                text-decoration: none;
+                                border-bottom: solid 4px var.$blue-darken-4;
+                                color: var.$blue-darken-4;
+                                transition: all 0.3s ease;
+                            }
+                        }
+                    }
+                    .current {
+                        a {
+                            border-bottom: solid 4px var.$blue-darken-3;
+                            color: var.$blue-darken-3;
+                        }
+                    }
+                }
+                &--secondary {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    column-gap: 10px;
+                    background: var.$white;
+                    padding-bottom: 20px;
+                    margin-top: 20px;
+                    overflow-x: scroll;
+                    .item {
+                            background: var.$white;
+                            border: solid 1px var.$grey-lighten-2;
+                            border-radius: 4px;
+                            filter: drop-shadow(4px 4px 2px var.$grey-lighten-3);
+                            white-space: nowrap;
+                            font-size: 0.9rem;
+                        a {
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            font-weight: bold;
+                            font-size: inherit;
+                            padding: 10px;
+                            border-radius: 4px;
+                            &:link,
+                            &:visited {
+                                transition: all 0.0s ease;
+                            }
+                            &:hover {
+                                background: var.$blue-darken-3;
+                                text-decoration: none;
+                                color: var.$white;
+                                transition: all 0.3s ease;
+                            }
+                        }
+                        &.current {
+                            background: var.$blue-darken-3;
+                            color: var.$white;
+                            a {
+                                border-radius: 4px;
+                                &:link,
+                                &:visited {
+                                    color: var.$white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(pc) {
+    .c {
+        &-pagenav {
+            &__block {
+                &--primary {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    column-gap: 20px;
+                    .item {
+                        white-space: nowrap;
+                        a {
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            font-weight: bold;
+                            background: var.$white;
+                            border-bottom: solid 4px var.$grey-lighten-3;
+                            padding: 10px 20px;
+                            &:link,
+                            &:visited {
+                            transition: all 0.0s ease;
+                            }
+                            &:hover {
+                                text-decoration: none;
+                                border-bottom: solid 4px var.$blue-darken-4;
+                                color: var.$blue-darken-4;
+                                transition: all 0.3s ease;
+                            }
+                        }
+                    }
+                    .current {
+                        a {
+                            border-bottom: solid 4px var.$blue-darken-3;
+                            color: var.$blue-darken-3;
+                        }
+                    }
+                }
+                &--secondary {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    column-gap: 20px;
+                    background: var.$white;
+                    margin-top: 20px;
+                    .item {
+                            background: var.$white;
+                            border: solid 1px var.$grey-lighten-2;
+                            border-radius: 4px;
+                            filter: drop-shadow(4px 4px 2px var.$grey-lighten-3);
+                        a {
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            font-weight: bold;
+                            padding: 10px 20px;
+                            border-radius: 4px;
+                            &:link,
+                            &:visited {
+                                transition: all 0.0s ease;
+                            }
+                            &:hover {
+                                background: var.$blue-darken-3;
+                                text-decoration: none;
+                                color: var.$white;
+                                transition: all 0.3s ease;
+                            }
+                        }
+                        &.current {
+                            background: var.$blue-darken-3;
+                            color: var.$white;
+                            a {
+                                border-radius: 4px;
+                                &:link,
+                                &:visited {
+                                    color: var.$white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }

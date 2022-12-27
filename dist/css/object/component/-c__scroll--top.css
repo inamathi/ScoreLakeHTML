@@ -1,0 +1,49 @@
+/**
+ * common
+ **/
+/**
+ * teal
+ **/
+/**
+ *grey
+*/
+/**
+ *blue-grey
+*/
+/**
+ *red
+*/
+/**
+**blue
+*/
+/**
+ *light-blue
+*/
+/**
+*green
+*
+*/
+/**
+ * orange
+ *
+*/
+/**
+ * spot
+*/
+/**
+ * half tone
+**/
+/**
+ * result
+**/
+.c-button__scroll--top {
+  display: block;
+  width: 64px;
+  height: 64px;
+  border: solid 1px red;
+  position: fixed;
+  top: 120px;
+  right: 100px;
+  z-index: 3;
+}
+/*# sourceMappingURL=-c__scroll--top.css.map */

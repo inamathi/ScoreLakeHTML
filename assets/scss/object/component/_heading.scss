@@ -1,0 +1,18 @@
+@use '../../common/var' as var;
+
+.heading {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    &.normal {
+        height: 32px;
+        font-size: 1.2rem;
+        border-left: 10px solid red;
+        padding-left: 10px;
+        margin: 20px 0;
+    }
+    &.table {
+        font-weight: bold;
+        margin: 10px 0;
+    }
+}

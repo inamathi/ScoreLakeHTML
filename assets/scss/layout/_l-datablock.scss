@@ -1,0 +1,81 @@
+@use '../common/var' as var;
+@use '../common/mixin' as m;
+
+@include m.mq(sps) {
+    .l {
+        &-datablock__wrapper {
+            max-width: 90vw;
+            margin: auto;
+            &--through {
+                display: block;
+                max-width: 90vw;
+                margin: 20px auto;
+            }
+            &--grid {
+                display: grid;
+                max-width: 90vw;
+                margin: 20px auto;
+                &.roster {
+                    grid-template-columns: repeat(1, 1fr);
+                    column-gap: 40px;
+                }
+            }
+            &--flex {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+                column-gap: 40px;
+                max-width: 90vw;
+                margin: 20px auto;
+            }
+        }
+        &-datablock__content {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            width: 100%;
+            margin: 20px auto;
+        }
+    }
+}
+@include m.mq(pc) {
+    .l {
+        &-datablock__wrapper {
+            max-width: 90vw;
+            margin: auto;
+            &--through {
+                display: block;
+                max-width: 90vw;
+                margin: 20px auto;
+            }
+            &--grid {
+                display: grid;
+                max-width: 90vw;
+                margin: 20px auto;
+                &.roster {
+                    grid-template-columns: repeat(2, 1fr);
+                    column-gap: 40px;
+                }
+            }
+            &--flex {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+                column-gap: 40px;
+                max-width: 90vw;
+                margin: 20px auto;
+            }
+        }
+        &-datablock__content {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            width: 100%;
+            margin: 20px auto;
+        }
+    }
+}

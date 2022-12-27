@@ -1,0 +1,58 @@
+@use '../common/var' as var;
+@use '../common/mixin' as m;
+/* =================================================================
+====================================================================
+================================================================= */
+@include m.mq(sps) {
+    .site-gnav {
+        width: 100%;
+        background: var.$white;
+        padding: 0 5vw;
+        margin: auto;
+        .gnav-wrapper {
+            display: flex;
+            justify-content: space-around;
+            .gnav-item {
+                padding: 10px 0;
+                a {
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 0.9rem;
+                    color: var.$teal-darken-4;
+                }
+                &.current {
+                border-bottom: 4px solid var.$teal;
+                }
+            }
+        }
+    }
+}
+/* =================================================================
+====================================================================
+================================================================= */
+@include m.mq(pc) {
+    .site-gnav {
+        width: 100%;
+        background: var.$white;
+        padding: 0 5vw;
+        margin: auto;
+        .gnav-wrapper {
+            display: flex;
+            justify-content: center;
+            column-gap: 60px;
+            .gnav-item {
+                text-align: center;
+                font-weight: bold;
+                font-size: 0.9rem;
+                padding: 10px 0;
+                color: var.$teal-darken-4;
+                &.current {
+                   border-bottom: 4px solid var.$teal;
+                }
+                a {
+                    font-size: inherit;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@use '../common/var' as var;
+@use '../common/mixin' as m;
+.l {
+    &-wrapper {
+        width: 100%;
+        min-height: 100vh;
+    }
+}

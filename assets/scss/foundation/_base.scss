@@ -1,0 +1,22 @@
+@use '../common/var' as var;
+
+* {
+    font-size: 16px;
+    line-height: 1;
+    color: var.$blue-grey-darken-5;
+    box-sizing: border-box;
+}
+img {
+    display: block;
+}
+a {
+    &:link,
+    &:visited {
+        color: var.$blue;
+        text-decoration: none;
+    }
+    &:hover {
+        color: var.$blue-lighten-3;
+        text-decoration: underline;
+    }
+}

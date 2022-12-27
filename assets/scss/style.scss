@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/**
+/**
+* foundation
+*/
+@use './foundation/_base';
+@use './foundation/_reset';
+/**
+* layout
+*/
+@use './layout/_wrapper';
+@use './layout/_l-footer';
+@use './layout/_l-header';
+@use './layout/_main';
+@use './layout/_gnav';
+@use './layout/_split';
+@use './layout/_l-main';
+@use './layout/_l-pagenav';
+@use './layout/_l-datablock';
+/**
+* object
+*/
+@use './object/_index';

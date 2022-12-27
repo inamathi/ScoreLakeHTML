@@ -1,0 +1,39 @@
+
+/**
+* component
+*/
+@use './component/articles';
+@use './component/button';
+@use './component/dialog';
+@use './component/form';
+@use './component/grid';
+@use './component/heading';
+@use './component/paging';
+@use './component/tables';
+@use './component/splash';
+@use './component/c-gamecard';
+@use './component/c-info';
+@use './component/c-pagenav';
+@use './component/c-list';
+@use './component/c-heading';
+@use './component/c-table';
+@use './component/c-acc';
+@use './component/c-icon';
+@use './component/c-button';
+@use './component/c-bb-background';
+@use './component/c-photo';
+/**
+* project
+*/
+@use './project/p-result';
+@use './project/p-datablock';
+@use './project/p-acc-player';
+@use './project/cards';
+@use './project/results';
+@use './project/topix';
+
+
+/**
+* utility
+*/
+@use './utility/margin';

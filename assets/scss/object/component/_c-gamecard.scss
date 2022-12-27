@@ -1,0 +1,114 @@
+@use '../../common/var' as var;
+
+.c {
+    &-gamecard {
+        background: var.$white;
+        filter:drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+        border-radius: 8px;
+        border: solid 1px var.$blue-grey-lighten-4;
+        padding: 10px;
+        &__title {
+            background: rgba(var.$blue, 0.2);
+            border-radius: 4px;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            &.primary {
+                font-size: 1.1rem;
+            }
+            .secondary {
+                font-size: 0.9rem;
+                font-weight: normal;
+                margin-left: 10px;
+            }
+        }
+        &__content {
+            &--grid {
+                display: grid;
+                .inning {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    grid-column: 1/2;
+                    grid-row: 1/3;
+                    font-weight: bold;
+                }
+                .team {
+                    grid-column: 2/3;
+                    font-weight: bold;
+                    padding: 10px 0;
+                    &.top {
+                        grid-row: 1/2;
+                    }
+                    &.bottom {
+                        grid-row: 2/3
+                    }
+                    .area {
+                        grid-column: 3/4;
+                        font-weight: normal;
+                        font-size: 0.9rem;
+                        margin-left: 10px;
+                    }
+                }
+                .score {
+                    grid-column: 4/5;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    padding-right: 20px;
+                    &.top {
+                        grid-row: 1/2;
+                    }
+                    &.bottom {
+                        grid-row: 2/3
+                    }
+                }
+            }
+        }
+        .status-grid {
+            display: grid;
+            margin-top: 20px;
+            .status-info {
+                font-size: 0.9rem;
+                padding: 0 20px 10px;
+                color: var.$blue-grey;
+            }
+            .status-results {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 10px;
+                padding: 0 20px 10px;
+                dd {
+                    font-weight: bold;
+                    font-size: 0.9rem;
+                    border-radius: 2px;
+                    white-space: nowrap;
+                    padding: 5px 15px;
+                    &.hit {
+                        color: var.$white;
+                        background: var.$light-blue;
+                    }
+                    &.out {
+                        color: inherit;
+                        font-weight: normal;
+                        background: var.$grey-lighten-3;
+                    }
+                    &.bb {
+                        color: var.$white;
+                        background: var.$green;
+                    }
+                    &.long-hit {
+                        color: var.$white;
+                        background: var.$orange;
+                    }
+                    &.sac {
+                        color: var.$white;
+                        background: var.$grey;
+                    }
+                }
+            }
+        }
+    }
+}

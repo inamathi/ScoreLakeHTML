@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- add meta -->
+    <meta property="og:title" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:type" content="" />
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="" />
+    <meta property="og:locale" content="ja_JP" />
+    <link rel="icon" type="image/x-icon" href="" />
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>ScoreLake</title>
+</head>
+<body class="wrapper">
+    <header class="site-header">
+        <div class="site-header-inner">
+            <div class="header-logo">
+                <img src="./image/img_site_logo_nega.png">
+            </div>
+            <div class="header-form">
+                <input type="text" placeholder="">
+                <i class="material-icons">search</i>
+            </div>
+        </div>
+    </header>
+    <main class="site-main">
+        <div class="site-main-container">
+            <h2 class="heading normal">選手基本情報</h2>
+            <div class="info-player-wrapper">
+                <!-- 選手情報 -->
+                <div class="info-player">
+                    <div class ="player-photo">
+                        <img src="image/img_player_watarai.png">
+                    </div>
+                    <dl class="player-commons">
+                        <dt class="commons-title">選手氏名</dt>
+                        <dd class="commons-value">
+                            <span class="label">読み方：</span>
+                            <span class="value">わたらいりゅうき</span>
+                        </dd>
+                        <dd class="commons-value">
+                            <span class="label">英字：</span>
+                            <span class="value">WATARAI Ryuki</span>
+                        </dd>
+                        <dd class="commons-value">
+                            <span class="label">所属：</span>
+                            <span class="value">ENEOS硬式野球部</span>
+                        </dd>
+                        <dd class="commons-value">
+                            <span class="label">ポジション：</span>
+                            <span class="value">外野手</span>
+                        </dd>
+                        <dd class="commons-value">
+                            <span class="label">投／打：</span>
+                            <span class="value">右／左</span>
+                        </dd>
+                        <dd class="commons-value">
+                            <span class="label">身長／体重：</span>
+                            <span class="value">183cm／73kg</span>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 球歴 -->
+                <dl class="bb-background">
+                    <dt class="ps">東京北砂リトルリーグ<span class="area">（東京）</span></dt>
+                    <dt class="jhs">佐倉リトルシニア<span class="area">（千葉）</span></dt>
+                    <dt class="hs">横浜高校<span class="area">（神奈川）</span></dt>
+                    <dd>第80回選抜高校野球（2017）</dd>
+                    <dt class="unv">法政大学<span class="area">（東京）</span></dt>
+                    <dt class="soc">JR東日本<span class="area">（東京）</span></dt>
+                    <dt class="soc">ENEOS<span class="area">（川崎市）</span></dt>
+                    <dd>都市対抗野球（2021, 2022）</dd>
+                    <dd>日本選手権（2021）</dd>
+                </dl>
+                <!-- 試合速報 -->
+                <dl class="card-game">
+                    <dt class="game-title">大会名やカップ名など<span class="title-stadium">スタジアム</span></dt>
+                    <dd class="game-grid">
+                        <ul class="score-grid">
+                            <li class="inning">00ウラ</li>
+                            <li class="team-top">先攻チーム名<span class="team-area">地域</span></li>
+                            <li class="score-top">00</li>
+                            <li class="team-bottom">後攻チーム名<span class="team-area">地域</span></li>
+                            <li class="score-bottom">00</li>
+                        </ul>
+                        <dl class="status-grid">
+                            <dt class="status-info">出場情報（打順／ポジション）</dt>
+                            <div class="status-results">
+                                <dd class="hit">安 打</dd>
+                                <dd class="out">凡 退</dd>
+                                <dd class="bb">四 球</dd>
+                                <dd class="long-hit">長 打</dd>
+                                <dd class="sac">犠 打</dd>
+                            </div>
+                        </dl>
+                    </dd>
+                </dl>
+            </div>
+            <h2 class="heading normal">成績サマリ</h2>
+            <div class="table-wrapper scroll">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>チーム</th>
+                            <th>カテゴリ（学年）</th>
+                            <th>年</th>
+                            <th>試合</th>
+                            <th>打数</th>
+                            <th>安打</th>
+                            <th>本</th>
+                            <th>打率</th>
+                            <th>得点</th>
+                            <th>打点</th>
+                            <th>盗塁</th>
+                            <th>出塁率</th>
+                            <th>長打率</th>
+                            <th>OPS</th>
+                        </tr>
+                        <tr>
+                            <th class="sort">▽</th>
+                            <th class="sort">▽</th>
+                            <th class="sort">▼</th>
+                            <th class="sort">▽</th>
+                            <th class="sort">▽</th>
+                            <th class="sort">▽</th>
+                            <th class="sort">▽</th>
+                            <th class="sort">▽</th>
+                            <th class="sort">▽</th>
+                            <th class="sort">▽</th>
+                            <th class="sort">▽</th>
+                            <th class="sort">▽</th>
+                            <th class="sort">▽</th>
+                            <th class="sort">▽</th>
+                        </tr>
+                        <tr>
+                            <td class="left">所属チーム名</td>
+                            <td class="left">x年・硬式</td>
+                            <td class="center">20xx</td>
+                            <td>00</td>
+                            <td>000</td>
+                            <td>000</td>
+                            <td>00</td>
+                            <td>.000</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>.000</td>
+                            <td>.000</td>
+                            <td>1.000</td>
+                        </tr>
+                        <tr>
+                            <td class="left">所属チーム名</td>
+                            <td class="left">x年・硬式</td>
+                            <td class="center">20xx</td>
+                            <td>00</td>
+                            <td>000</td>
+                            <td>000</td>
+                            <td>00</td>
+                            <td>.000</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>.000</td>
+                            <td>.000</td>
+                            <td>1.000</td>
+                        </tr>
+                        <tr>
+                            <td class="left">所属チーム名</td>
+                            <td class="left">x年・硬式</td>
+                            <td class="center">20xx</td>
+                            <td>00</td>
+                            <td>000</td>
+                            <td>000</td>
+                            <td>00</td>
+                            <td>.000</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>.000</td>
+                            <td>.000</td>
+                            <td>1.000</td>
+                        </tr>
+                        <tr>
+                            <td class="left">所属チーム名</td>
+                            <td class="left">x年・硬式</td>
+                            <td class="center">20xx</td>
+                            <td>00</td>
+                            <td>000</td>
+                            <td>000</td>
+                            <td>00</td>
+                            <td>.000</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>.000</td>
+                            <td>.000</td>
+                            <td>1.000</td>
+                        </tr>
+                        <tr>
+                            <td class="left">所属チーム名</td>
+                            <td class="left">x年・硬式</td>
+                            <td class="center">20xx</td>
+                            <td>00</td>
+                            <td>000</td>
+                            <td>000</td>
+                            <td>00</td>
+                            <td>.000</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>.000</td>
+                            <td>.000</td>
+                            <td>1.000</td>
+                        </tr>
+                        <tr>
+                            <td class="left">所属チーム名</td>
+                            <td class="left">x年・硬式</td>
+                            <td class="center">20xx</td>
+                            <td>00</td>
+                            <td>000</td>
+                            <td>000</td>
+                            <td>00</td>
+                            <td>.000</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>.000</td>
+                            <td>.000</td>
+                            <td>1.000</td>
+                        </tr>
+                        <tr>
+                            <td class="left">所属チーム名</td>
+                            <td class="left">x年・硬式</td>
+                            <td class="center">20xx</td>
+                            <td>00</td>
+                            <td>000</td>
+                            <td>000</td>
+                            <td>00</td>
+                            <td>.000</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>.000</td>
+                            <td>.000</td>
+                            <td>1.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <nav class="page-nav-wrapper">
+                <ul class="page-nav">
+                    <li class="nav-item">球歴・成績</li>
+                    <li class="nav-item">試合ログ</li>
+                </ul>
+                <ul class="anchor player">
+                    <li class="anchor-item">小</li>
+                    <li class="anchor-item">中</li>
+                    <li class="anchor-item">高</li>
+                    <li class="anchor-item">大</li>
+                    <li class="anchor-item">社</li>
+                    <li class="anchor-item">プ</li>
+                    <li class="anchor-item">すべて</li>
+                </ul>
+            </nav>
+            <div class="wrapper">
+                <div class="acc-wrapper">
+                    <dl class="acc-card">
+                        <div class="subtitle">中学（硬式）2012-2013</div>
+                        <div class="title">横浜ヤング（神奈川）</div>
+                        <i class="arrow material-icons">expand_more</i>
+                    </dl>
+                    <input type="checkbox" class="hidden-trigger">
+                    <div class="table-wrapper scroll">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>チーム</th>
+                                    <th>カテゴリ（学年）</th>
+                                    <th>年</th>
+                                    <th>試合</th>
+                                    <th>打数</th>
+                                    <th>安打</th>
+                                    <th>本</th>
+                                    <th>打率</th>
+                                    <th>得点</th>
+                                    <th>打点</th>
+                                    <th>盗塁</th>
+                                    <th>出塁率</th>
+                                    <th>長打率</th>
+                                    <th>OPS</th>
+                                </tr>
+                                <tr>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▼</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="acc-wrapper">
+                    <dl class="acc-card">
+                        <div class="subtitle">高校（硬式）2015-2017</div>
+                        <div class="title">鶴岡東高校（山形）</div>
+                        <i class="arrow material-icons">expand_more</i>
+                    </dl>
+                    <input type="checkbox" class="hidden-trigger">
+                    <div class="table-wrapper scroll">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>チーム</th>
+                                    <th>カテゴリ（学年）</th>
+                                    <th>年</th>
+                                    <th>試合</th>
+                                    <th>打数</th>
+                                    <th>安打</th>
+                                    <th>本</th>
+                                    <th>打率</th>
+                                    <th>得点</th>
+                                    <th>打点</th>
+                                    <th>盗塁</th>
+                                    <th>出塁率</th>
+                                    <th>長打率</th>
+                                    <th>OPS</th>
+                                </tr>
+                                <tr>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▼</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="acc-wrapper">
+                    <dl class="acc-card">
+                        <div class="subtitle">社会人（硬式）2020-2021</div>
+                        <div class="title">JR東日本（東京）</div>
+                        <i class="arrow material-icons">expand_more</i>
+                    </dl>
+                    <input type="checkbox" class="hidden-trigger">
+                    <div class="table-wrapper scroll">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>チーム</th>
+                                    <th>カテゴリ（学年）</th>
+                                    <th>年</th>
+                                    <th>試合</th>
+                                    <th>打数</th>
+                                    <th>安打</th>
+                                    <th>本</th>
+                                    <th>打率</th>
+                                    <th>得点</th>
+                                    <th>打点</th>
+                                    <th>盗塁</th>
+                                    <th>出塁率</th>
+                                    <th>長打率</th>
+                                    <th>OPS</th>
+                                </tr>
+                                <tr>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▼</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="acc-wrapper">
+                    <dl class="acc-card">
+                        <div class="subtitle">社会人（硬式）2021-2022</div>
+                        <div class="title">ENEOS（川崎市）</div>
+                        <i class="arrow material-icons">expand_more</i>
+                    </dl>
+                    <input type="checkbox" class="hidden-trigger">
+                    <div class="table-wrapper scroll">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>チーム</th>
+                                    <th>カテゴリ（学年）</th>
+                                    <th>年</th>
+                                    <th>試合</th>
+                                    <th>打数</th>
+                                    <th>安打</th>
+                                    <th>本</th>
+                                    <th>打率</th>
+                                    <th>得点</th>
+                                    <th>打点</th>
+                                    <th>盗塁</th>
+                                    <th>出塁率</th>
+                                    <th>長打率</th>
+                                    <th>OPS</th>
+                                </tr>
+                                <tr>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▼</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                    <th class="sort">▽</th>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">所属チーム名</td>
+                                    <td class="left">x年・硬式</td>
+                                    <td class="center">20xx</td>
+                                    <td>00</td>
+                                    <td>000</td>
+                                    <td>000</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>.000</td>
+                                    <td>.000</td>
+                                    <td>1.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <div class="footer-logo">
+                <img src="./image/img_site_logo_nega.png">
+                <div class="footer-form">
+                    <input type="text" placeholder="">
+                    <i class="material-icons">search</i>
+                </div>
+            </div>
+            <div class="footer-info">
+                <dl class="info-list">
+                    <dt class="list-index">Score Lake</dt>
+                    <div class="list-link-wrapper">
+                        <dd class="list-link"><a href="index.html">すべて</a></dd>
+                        <dd class="list-link"><a href="index_team.html">チーム</a></dd>
+                        <dd class="list-link"><a href="index_player.html">選手</a></dd>
+                        <dd class="list-link"><a href="index_cup.html">大会・連盟</a></dd>
+                        <dd class="list-link"><a href="index_stadium.html">球場</a></dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="footer-info">
+                <dl class="info-list">
+                    <dt class="list-index">このサイトについて</dt>
+                    <div class="list-link-wrapper">
+                        <dd class="list-link"><a href="">運営会社 Omyu Technology</a></dd>
+                        <dd class="list-link"><a href="">利用規約</a></dd>
+                        <dd class="list-link"><a href="">プライバシーポリシー</a></dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="footer-info">
+                <dl class="info-list">
+                    <dt class="list-index">Omyutech サービス紹介</dt>
+                    <div class="list-link-wrapper">
+                        <dd class="list-link"><a href="">一球速報</a></dd>
+                        <dd class="list-link"><a href="">Easy Score</a></dd>
+                        <dd class="list-link"><a href="">e-League</a></dd>
+                        <dd class="list-link"><a href="">e-League</a></dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+        <div class="credit">© 2022 Omyu Technology Co.,Ltd</div>
+    </footer>
+</body>
+</html>

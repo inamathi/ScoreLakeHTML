@@ -1,0 +1,12 @@
+@use '../common/var' as var;
+@use '../common/mixin' as m;
+
+.l {
+    &-main {
+        &__result {
+            background: var.$white;
+            padding: 100px 0;
+            column-gap: 40px;
+        }
+    }
+}

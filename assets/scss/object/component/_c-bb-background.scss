@@ -1,0 +1,81 @@
+@use '../../common/var' as var;
+.c {
+        &-bb-background {
+            grid-area: "bb-background";
+            dt {
+                margin: 20px 0 10px 20px;
+                position: relative;
+                &:before {
+                    top: -30%;
+                    left: -80px;
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 70px;
+                    background: var.$white;
+                    font-size: 0.8rem;
+                    border-radius: 4px;
+                    padding: 8px 10px 4px;
+                }
+                .area {
+                    font-weight: normal;
+                    font-size: 0.9rem;
+                }
+                &.ps {
+                    &:before {
+                        content: '小学校';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.jhs {
+                    &:before {
+                        content: '中学校';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.hs {
+                    &:before {
+                        content: '高校';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.unv {
+                    &:before {
+                        content: '大学';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.soc {
+                    &:before {
+                        content: '社会人';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.pro {
+                    &:before {
+                        content: '独立';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+                &.npb {
+                    &:before {
+                        content: 'NPB';
+                        color: var.$light-blue;
+                        border: solid 1px var.$light-blue;
+                    }
+                }
+            }
+            dd {
+                margin: 10px 0 10px 40px;
+                font-size: 0.9rem;
+                color: var.$blue-grey;
+            }
+        }
+    }

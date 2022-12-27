@@ -1,0 +1,79 @@
+@use '../../common/var' as var;
+
+.c {
+    &-heading {
+        &--main {
+            display: flex;
+            align-items: center;
+            height: 32px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-left: 10px solid var.$red;
+            padding-left: 10px;
+            margin: 20px 0;
+        }
+        &--primary {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var.$blue-grey-darken-3;
+            padding: 5px 0 5px 10px;
+            border-left: solid 2px var.$teal;
+        }
+        &--icon {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            img {
+                width: 32px;
+                height: 32px;
+                margin-right: 10px;
+            }
+            &--red {
+                color: var.$red;
+                border-bottom: dotted 2px var.$red;
+            }
+        }
+        &__select {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-left: 40px;
+            img {
+                width: 32px;
+                height: 32px;
+            }
+            span {
+                font-weight: bold;
+                font-size: 0.9rem;
+                margin-left: 10px;
+            }
+            select {
+                position: relative;
+                border: solid 1px var.$blue-grey-lighten-3;
+                height: 32px;
+                font-weight: normal;
+                font-size: 0.9rem;
+                border-radius: 4px;
+                text-align: left;
+                padding: 8px 40px 8px 10px;
+                margin-left: 10px;
+                option {
+                    font-weight: normal;
+                }
+            }
+            &:after {
+                content: '';
+                position: relative;
+                width: 8px;
+                height: 8px;
+                border-right: solid 2px var.$blue-grey-lighten-3;
+                border-bottom: solid 2px var.$blue-grey-lighten-3;
+                left: -20px;
+                top: -2px;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

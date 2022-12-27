@@ -1,0 +1,67 @@
+@use '../../common/var' as var;
+// ランキングテーブルアコーディオン
+.c {
+    &-acc {
+        &__table {
+            border: solid 10px red;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            border: none;
+
+            .acc-table-column {
+                width: 24%;
+                display: flex;
+                flex-direction: column-reverse;
+                input[type="checkbox"] {
+                    width: 100%;
+                    height: 30px;
+                    position: relative;
+                    &:hover {
+                        background: rgba(var.$blue-lighten-4, 0.5);
+                    }
+                    &:after {
+                        content: '2位〜10位までを表示';
+                        position: absolute;
+                        font-size: 0.8rem;
+                        top: 10px;
+                        right: 0;
+                    }
+                    & + .acc-table-short{
+                        position: relative;
+                        width: 100%;
+                        height: 4.6875rem;
+                        border: solid 1px var.$grey;
+                        overflow: hidden;
+                        transition: all 0.5s ease;
+                    }
+                }
+                input[type="checkbox"]:checked {
+                    width: 100%;
+                    height: 30px;
+                    position: relative;
+                    &:hover {
+                        background: var.$blue-grey-lighten-4;
+                    }
+                    &:after {
+                        content: '閉じる';
+                        position: absolute;
+                        font-size: 0.8rem;
+                        top: 10px;
+                        right: 0;
+                    }
+                    & + .acc-table-short{
+                        position: relative;
+                        width: 100%;
+                        height: auto;
+                        border: solid 1px var.$grey;
+                        overflow: hidden;
+                        transition: all 0.5s ease;
+                    }
+                }
+
+            }
+        }
+    }
+}

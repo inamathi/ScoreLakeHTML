@@ -1,0 +1,11 @@
+@use '../common/var' as var;
+@use '../common/mixin' as m;
+
+.l {
+    &-pagenav {
+        max-width: 90vw;
+        border-top: solid 1px var.$grey-lighten-1;
+        padding: 20px 0;
+        margin: 40px auto 0px;
+    }
+}

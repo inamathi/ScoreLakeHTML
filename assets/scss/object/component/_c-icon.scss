@@ -1,0 +1,110 @@
+@use '../../common/var' as var;
+@use '../../common/mixin' as m;
+
+@include m.mq(sps) {
+    .c {
+        &-mask {
+            &--facebook {
+                position: relative;
+                display: block;
+                width: 32px;
+                height: 32px;
+                background: var.$grey-lighten-1;
+                -webkit-mask-image: url("../image/icon_facebook.svg") ;
+                mask-image: url("../image/icon_facebook.svg") ;
+                transition: all 0.3s ease;
+                &:hover {
+                    background: var.$light-blue;
+                    transition: all 0.3s ease;
+                }
+            }
+            &--twitter {
+                position: relative;
+                display: block;
+                width: 32px;
+                height: 32px;
+                background: var.$grey-lighten-1;
+                -webkit-mask-image: url("../image/icon_twitter.svg") ;
+                mask-image: url("../image/icon_twitter.svg") ;
+                transition: all 0.3s ease;
+                &:hover {
+                    background: var.$light-blue;
+                    transition: all 0.3s ease;
+                }
+            }
+            &--topbtn {
+                display: block;
+                width: 28px;
+                height: 40px;
+                background: rgba(var.$blue-grey-darken-3, 0.7);
+                -webkit-mask-image: url("../image/icon_topbtn.svg") ;
+                mask-image: url("../image/icon_topbtn.svg") ;
+                border-radius: 8px 0 0 8px;
+                position: fixed;
+                bottom: 20px;
+                right: 0;
+                z-index: 3;
+                opacity: 1;
+                transition: all 0.3s ease;
+                &.hide-topbtn {
+                    opacity: 0;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+}
+
+@include m.mq(pc) {
+    .c {
+        &-mask {
+            &--facebook {
+                position: relative;
+                display: block;
+                width: 32px;
+                height: 32px;
+                background: var.$grey-lighten-1;
+                -webkit-mask-image: url("../image/icon_facebook.svg") ;
+                mask-image: url("../image/icon_facebook.svg") ;
+                transition: all 0.3s ease;
+                &:hover {
+                    background: var.$light-blue;
+                    transition: all 0.3s ease;
+                }
+            }
+            &--twitter {
+                position: relative;
+                display: block;
+                width: 32px;
+                height: 32px;
+                background: var.$grey-lighten-1;
+                -webkit-mask-image: url("../image/icon_twitter.svg") ;
+                mask-image: url("../image/icon_twitter.svg") ;
+                transition: all 0.3s ease;
+                &:hover {
+                    background: var.$light-blue;
+                    transition: all 0.3s ease;
+                }
+            }
+            &--topbtn {
+                display: block;
+                width: 48px;
+                height: 64px;
+                background: var.$blue-grey-lighten-3;
+                -webkit-mask-image: url("../image/icon_topbtn.svg") ;
+                mask-image: url("../image/icon_topbtn.svg") ;
+                border-radius: 8px 0 0 8px;
+                position: fixed;
+                bottom: 120px;
+                right: 0;
+                z-index: 3;
+                opacity: 1;
+                transition: all 0.3s ease;
+                &.hide-topbtn {
+                    opacity: 0;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+}

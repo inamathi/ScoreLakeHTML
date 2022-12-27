@@ -1,0 +1,19 @@
+@use '../../common/var' as var;
+
+.c {
+    &-button {
+        &__scroll {
+            &--top {
+                display: block;
+                width: 48px;
+                height: 64px;
+                background: var.$blue-grey-lighten-3;
+                border-radius: 8px 0 0 8px;
+                position: fixed;
+                bottom: 120px;
+                right: 0;
+                z-index: 3;
+            }
+        }
+    }
+}

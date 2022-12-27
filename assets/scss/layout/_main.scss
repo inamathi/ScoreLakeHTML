@@ -1,0 +1,24 @@
+@use '../common/var' as var;
+@use '../common/mixin' as m;
+
+.site-main {
+    &-container {
+        width: 100%;
+        background: var.$blue-grey-lighten-5;
+        padding: 20px 0;
+        margin: auto;
+    }
+}
+/* =================================================================
+====================================================================
+================================================================= */
+@include m.mq(pc) {
+    .site-main {
+        &-container {
+            width: 100%;
+            background: var.$blue-grey-lighten-5;
+            padding: 20px 5vw;
+            margin: auto;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+@use '../common/var' as var;
+@use '../common/mixin' as m;
+
+.l {
+    &-header {
+        &__wrapper {
+            &--flex {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 80px;
+                display: flex;
+                justify-content: space-between;
+                column-gap: 10px;
+                align-items: center;
+                background: var.$white;
+                border-top: solid 4px var.$teal;
+                filter: drop-shadow(0px 4px 4px var.$grey-lighten-1);
+                padding: 10px 5vw;
+                margin: auto;
+                z-index: 2;
+                transition: all 0.5s ease;
+                .header-logo {
+                    max-width: 150px;
+                    margin-right: auto;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .header-sharebtn {
+                    display: flex;
+                    flex-direction: row;
+                    column-gap: 20px;
+                    li {
+                        width: 32px;
+                        height: 32px;
+                        img {
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                .header-form {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    margin-right: 20px;
+                    .material-icons {
+                        position: absolute;
+                        top: 4px;
+                        left: 4px;
+                        color: var.$grey-lighten-1;
+                    }
+                    input[type="text"] {
+                        width: 64px;
+                        height: 32px;
+                        background: var.$grey-lighten-3;
+                        border-radius: 4px;
+                        transition: all 0.3s ease;
+                        color: transparent;
+                        &:focus {
+                            width: 250px;
+                            height: 32px;
+                            transition: all 0.3s ease;
+                            background: var.$white;
+                            outline: none;
+                            padding-left: 28px;
+                            font-size: 0.9rem;
+                            color: var.$grey-darken-4;
+                            box-shadow: 0px 0px 2px 2px var.$grey-lighten-3 inset;
+                        }
+                    }
+                }
+                &.hide-header {
+                    top: -100px;
+                    transition: all 0.2s ease;
+                }
+            }
+        }
+    }
+}

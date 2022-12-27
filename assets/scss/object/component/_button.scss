@@ -1,0 +1,10 @@
+@use '../../common/var' as var;
+
+.results-normal {
+    display: block;
+    background: var.$white;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 20px 40px;
+    margin: 40px auto;
+}
