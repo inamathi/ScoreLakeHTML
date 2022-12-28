@@ -8,7 +8,7 @@
 @use './component/form';
 @use './component/grid';
 @use './component/heading';
-@use './component/paging';
+@use './component/c-paging';
 @use './component/tables';
 @use './component/splash';
 @use './component/c-gamecard';
@@ -28,9 +28,8 @@
 @use './project/p-result';
 @use './project/p-datablock';
 @use './project/p-acc-player';
-@use './project/cards';
-@use './project/results';
-@use './project/topix';
+@use './project/p-list-content';
+@use './project/p-topix';
 
 
 /**

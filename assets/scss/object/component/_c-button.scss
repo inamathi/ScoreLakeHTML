@@ -15,5 +15,17 @@
                 z-index: 3;
             }
         }
+        &__content-list--normal {
+            display: block;
+            background: var.$white;
+            font-weight: bold;
+            border: solid 1px var.$grey-lighten-1;
+            border-radius: 4px;
+            padding: 15px 40px;
+            margin: 40px auto;
+            &:hover {
+                background: rgba(var.$light-blue, 0.2);
+            }
+        }
     }
 }

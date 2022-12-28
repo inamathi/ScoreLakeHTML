@@ -1,0 +1,141 @@
+@use '../common/var' as var;
+@use '../common/mixin' as m;
+
+/* =================================================================
+====================================================================
+================================================================= */
+@include m.mq(sps) {
+    .l {
+        &-split__column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            column-gap: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            &.border {
+                border-bottom: solid 1px var.$blue-grey-lighten-3;
+            }
+            .column-contents {
+                width: 100%;
+            }
+            .column-banner{
+                padding-top: 20px;
+                .banner-scraper-160 {
+                    background: var.$blue-grey-lighten-4;
+                    width: 160px;
+                    height: 600px;
+                }
+                .banner-rectangle-336 {
+                    background: var.$blue-grey-lighten-4;
+                    width: 336px;
+                    height: 280px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto 20px;
+                }
+            }
+        }
+    }
+}
+/* =================================================================
+====================================================================
+================================================================= */
+@include m.mq(spl) {
+    .split {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        column-gap: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        .column-content {
+            width: 100%;
+        }
+        .column-banner{
+            .banner-scraper-160 {
+                background: var.$blue-grey-lighten-4;
+                width: 160px;
+                height: 600px;
+            }
+            .banner-rectangle-336 {
+                background: var.$blue-grey-lighten-4;
+                width: 336px;
+                height: 280px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin:0 auto 20px;
+            }
+        }
+    }
+}
+/* =================================================================
+====================================================================
+================================================================= */
+@include m.mq(tab) {
+    .split {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        .column-content {
+            width: 100%;
+        }
+        .column-banner{
+            .banner-scraper-160 {
+                background: var.$blue-grey-lighten-4;
+                width: 160px;
+                height: 600px;
+            }
+            .banner-rectangle-336 {
+                background: var.$blue-grey-lighten-4;
+                width: 336px;
+                height: 280px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+/* =================================================================
+====================================================================
+================================================================= */
+@include m.mq(pc) {
+    .l {
+        &-split__column {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            &.border {
+                border-bottom: solid 1px var.$blue-grey-lighten-3;
+            }
+            .column-contents {
+                width: 100%;
+            }
+            .column-banner{
+                padding-top: 20px;
+                .banner-scraper-160 {
+                    background: var.$blue-grey-lighten-4;
+                    width: 160px;
+                    height: 600px;
+                }
+                .banner-rectangle-336 {
+                    background: var.$blue-grey-lighten-4;
+                    width: 336px;
+                    height: 280px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

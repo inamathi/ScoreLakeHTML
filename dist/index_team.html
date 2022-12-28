@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- add meta -->
-    <meta property="og:title" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content=""/>
-    <meta property="og:url" content=""/>
-    <meta property="og:image" content=""/>
-    <meta property="og:type" content="" />
-    <meta name="twitter:card" content="" />
-    <meta name="twitter:site" content="" />
-    <meta property="og:locale" content="ja_JP" />
-    <link rel="icon" type="image/x-icon" href="" />
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-    <!-- css -->
-    <link rel="stylesheet" href="css/style.css">
-    <title>ScoreLake</title>
-</head>
-<body class="wrapper">
-    <header class="site-header">
-        <div class="site-header-inner">
-            <div class="header-logo">
-                <img src="./image/img_site_logo_nega.png">
-            </div>
-            <div class="header-form">
-                <input type="text" placeholder="">
-                <i class="material-icons">search</i>
-            </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- add meta -->
+        <meta property="og:title" content="" />
+        <meta property="og:site_name" content="" />
+        <meta property="og:description" content=""/>
+        <meta property="og:url" content=""/>
+        <meta property="og:image" content=""/>
+        <meta property="og:type" content="" />
+        <meta name="twitter:card" content="" />
+        <meta name="twitter:site" content="" />
+        <meta property="og:locale" content="ja_JP" />
+        <link rel="icon" type="image/x-icon" href="" />
+        <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        <!-- css -->
+        <link rel="stylesheet" href="css/style.css">
+        <title>ScoreLake</title>
+    </head>
+    <body class="l-wrapper">
+        <header class="l-header__wrapper--flex" id="header">
+        <div class="header-logo">
+            <img src="./image/img_site_logo_nega.png">
         </div>
+        <div class="header-form">
+            <input type="text" placeholder="">
+            <i class="material-icons">search</i>
+        </div>
+        <ul class="header-sharebtn">
+            <li>
+                <a href=""><div class="c-mask--twitter"></div></a>
+            </li>
+            <li>
+                <a href=""><div class="c-mask--facebook"></div></a>
+            </li>
+        </ul>
     </header>
-    <nav class="site-gnav">
-        <ul class="gnav-wrapper">
+    <nav class="l-gnav">
+        <ul class="l-gnav__wrapper">
             <li class="gnav-item"><a href="index.html">すべて</a></li>
             <li class="gnav-item current"><a href="index_team.html">チーム</a></li>
             <li class="gnav-item"><a href="index_player.html">選手</a></li>
@@ -42,205 +48,224 @@
             <li class="gnav-item"><a href="index_stadium.html">球場</a></li>
         </ul>
     </nav>
-    <main class="site-main">
-        <div class="site-main-container">
-            <div class="topix-container">
-                <h2 class="heading normal">PICKUP TEAMS</h2>
-                <ul class="topix-wrapper">
-                    <li class="topix-item--top">
-                        <img class="item-img" src="./image/img_team_logo_nissei.png" />
-                        <p class="item-title">チーム名・選手名</p>
-                        <p class="item-subtitle">チーム名・選手名補足情報</p>
-                        <p class="item-subtitle--add">経歴・戦績・表彰など</p>
-                    </li>
-                    <li class="topix-item--top"></li>
-                    <li class="topix-item--top"></li>
-                    <li class="topix-item--top"></li>
-                    <li class="topix-item--top"></li>
-                </ul>
+    <main class="l-main__result">
+        <div class="l-datablock__wrapper--grid">
+            <div class="l-datablock__content p-results">
+                    <h2 class="c-heading--main">PICKUP TEAMS</h2>
+                    <ul class="p-topix__wrapper">
+                        <li class="topix-item--top">
+                            <img class="item-img" src="./image/img_team_logo_nissei.png" />
+                            <p class="item-title">チーム名・選手名</p>
+                            <p class="item-subtitle">チーム名・選手名補足情報</p>
+                            <p class="item-subtitle--add">経歴・戦績・表彰など</p>
+                        </li>
+                        <li class="topix-item--top">
+                            <img class="item-img" src="./image/img_team_dummy01.png" />
+                            <p class="item-title">チーム名・選手名</p>
+                            <p class="item-subtitle">チーム名・選手名補足情報</p>
+                            <p class="item-subtitle--add">経歴・戦績・表彰など</p>
+                        </li>
+                        <li class="topix-item--top">
+                            <img class="item-img" src="./image/img_team_dummy02.png" />
+                            <p class="item-title">チーム名・選手名</p>
+                            <p class="item-subtitle">チーム名・選手名補足情報</p>
+                            <p class="item-subtitle--add">経歴・戦績・表彰など</p>
+                        </li>
+                    </ul>
             </div>
-            <!-- チーム -->
-            <div class="results-list team">
-                <h2 class="heading normal">チーム</h2>
-                <dl class="list-content list-column">
-                    <dt class="content-title">
-                        長い長い長い長い長い長い長いチーム名<span class="title-add">（地域・カテゴリ）</span>
-                    </dt>
-                    <div class="column-left">
-                        <dd class="content-data">
-                            <span class="label">読み方：</span>
-                            <span class="value">読み方データ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">略称：</span>
-                            <span class="value">略称データ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">カテゴリ：</span>
-                            <span class="value">カテゴリデータ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">本拠地：</span>
-                            <span class="value">本拠地データ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">所属：</span>
-                            <span class="value">所属連盟データ</span>
-                        </dd>
+        </div>
+        <!-- 検索結果（チーム） -->
+        <div class="l-datablock__wrapper--through">
+            <h2 class="c-heading--main">チーム</h2>
+            <div class="l-split__column">
+                <div class="column-contents">
+                    <div class="l-split__column border">
+                        <dl class="p-list-content--team">
+                            <dt class="content-title">
+                                チーム名<span class="title-add">（地域・カテゴリ）</span>
+                            </dt>
+                            <dd class="content-data">
+                                <span class="label">読み方：</span>
+                                <span class="value">読み方データ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">略称：</span>
+                                <span class="value">略称データ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">カテゴリ：</span>
+                                <span class="value">カテゴリデータ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">本拠地：</span>
+                                <span class="value">本拠地データ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">所属：</span>
+                                <span class="value">所属連盟データ</span>
+                            </dd>
+                        </dl>
+                        <div class="c-photo--index">
+                            <img src="./image/img_team_dummy03.png">
+                        </div>
                     </div>
-                    <div class="column-right">
-                        <dd class="content-photo team">
-                            <img src="image/img_team_result_kindai.png">
-                        </dd>
+                    <div class="l-split__column border">
+                        <dl class="p-list-content--team">
+                            <dt class="content-title">
+                                チーム名<span class="title-add">（地域・カテゴリ）</span>
+                            </dt>
+                            <dd class="content-data">
+                                <span class="label">読み方：</span>
+                                <span class="value">読み方データ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">略称：</span>
+                                <span class="value">略称データ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">カテゴリ：</span>
+                                <span class="value">カテゴリデータ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">本拠地：</span>
+                                <span class="value">本拠地データ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">所属：</span>
+                                <span class="value">所属連盟データ</span>
+                            </dd>
+                        </dl>
+                        <div class="c-photo--index">
+                            <img src="./image/img_team_dummy04.png">
+                        </div>
                     </div>
-                </dl>
-                <dl class="list-content list-column">
-                    <div class="column-left">
-                        <dt class="content-title">
-                            チーム名<span class="title-add">（地域・カテゴリ）</span>
-                        </dt>
-                        <dd class="content-data">
-                            <span class="label">読み方：</span>
-                            <span class="value">読み方データ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">略称：</span>
-                            <span class="value">略称データ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">カテゴリ：</span>
-                            <span class="value">カテゴリデータ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">本拠地：</span>
-                            <span class="value">本拠地データ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">所属：</span>
-                            <span class="value">所属連盟データ</span>
-                        </dd>
+                    <div class="l-split__column border">
+                        <dl class="p-list-content--team">
+                            <dt class="content-title">
+                                チーム名<span class="title-add">（地域・カテゴリ）</span>
+                            </dt>
+                            <dd class="content-data">
+                                <span class="label">読み方：</span>
+                                <span class="value">読み方データ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">略称：</span>
+                                <span class="value">略称データ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">カテゴリ：</span>
+                                <span class="value">カテゴリデータ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">本拠地：</span>
+                                <span class="value">本拠地データ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">所属：</span>
+                                <span class="value">所属連盟データ</span>
+                            </dd>
+                        </dl>
+                        <div class="c-photo--index">
+                            <img src="./image/img_team_dummy05.png">
+                        </div>
                     </div>
-                    <div class="column-right">
-                        <dd class="content-photo team">
-                            <img src="image/img_team_result_kindai.png">
-                        </dd>
+                    <div class="l-split__column border">
+                        <dl class="p-list-content--team">
+                            <dt class="content-title">
+                                チーム名<span class="title-add">（地域・カテゴリ）</span>
+                            </dt>
+                            <dd class="content-data">
+                                <span class="label">読み方：</span>
+                                <span class="value">読み方データ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">略称：</span>
+                                <span class="value">略称データ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">カテゴリ：</span>
+                                <span class="value">カテゴリデータ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">本拠地：</span>
+                                <span class="value">本拠地データ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">所属：</span>
+                                <span class="value">所属連盟データ</span>
+                            </dd>
+                        </dl>
+                        <div class="c-photo--index">
+                            <img src="./image/img_team_dummy06.png">
+                        </div>
                     </div>
-                </dl>
-                <dl class="list-content list-column">
-                    <div class="column-left">
-                        <dt class="content-title">
-                            チーム名<span class="title-add">（地域・カテゴリ）</span>
-                        </dt>
-                        <dd class="content-data">
-                            <span class="label">読み方：</span>
-                            <span class="value">読み方データ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">略称：</span>
-                            <span class="value">略称データ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">カテゴリ：</span>
-                            <span class="value">カテゴリデータ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">本拠地：</span>
-                            <span class="value">本拠地データ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">所属：</span>
-                            <span class="value">所属連盟データ</span>
-                        </dd>
+                    <div class="l-split__column border">
+                        <dl class="p-list-content--team">
+                            <dt class="content-title">
+                                チーム名<span class="title-add">（地域・カテゴリ）</span>
+                            </dt>
+                            <dd class="content-data">
+                                <span class="label">読み方：</span>
+                                <span class="value">読み方データ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">略称：</span>
+                                <span class="value">略称データ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">カテゴリ：</span>
+                                <span class="value">カテゴリデータ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">本拠地：</span>
+                                <span class="value">本拠地データ</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">所属：</span>
+                                <span class="value">所属連盟データ</span>
+                            </dd>
+                        </dl>
+                        <div class="c-photo--index">
+                            <img src="./image/img_team_dummy07.png">
+                        </div>
                     </div>
-                    <div class="column-right">
-                        <dd class="content-photo team">
-                            <img src="image/img_team_result_kindai.png">
-                        </dd>
+                    <ul class="c-paging">
+                        <li class="current"><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li class="arrow">
+                            <a href="">
+                                <i class="material-icons">
+                                    chevron_right
+                                </i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="column-banner">
+                    <div class="banner-rectangle-336">
+                        banner-reactangle-336*250
                     </div>
-                </dl>
-                <dl class="list-content list-column">
-                    <div class="column-left">
-                        <dt class="content-title">
-                            チーム名<span class="title-add">（地域・カテゴリ）</span>
-                        </dt>
-                        <dd class="content-data">
-                            <span class="label">読み方：</span>
-                            <span class="value">読み方データ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">略称：</span>
-                            <span class="value">略称データ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">カテゴリ：</span>
-                            <span class="value">カテゴリデータ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">本拠地：</span>
-                            <span class="value">本拠地データ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">所属：</span>
-                            <span class="value">所属連盟データ</span>
-                        </dd>
+                    <div class="banner-rectangle-336">
+                        banner-reactangle-336*250
                     </div>
-                    <div class="column-right">
-                        <dd class="content-photo team">
-                            <img src="image/img_team_result_kindai.png">
-                        </dd>
+                    <div class="banner-rectangle-336">
+                        banner-reactangle-336*250
                     </div>
-                </dl>
-                <dl class="list-content list-column">
-                    <dt class="content-title">
-                        チーム名<span class="title-add">（地域・カテゴリ）</span>
-                    </dt>
-                    <div class="column-left">
-                        <dd class="content-data">
-                            <span class="label">読み方：</span>
-                            <span class="value">読み方データ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">略称：</span>
-                            <span class="value">略称データ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">カテゴリ：</span>
-                            <span class="value">カテゴリデータ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">本拠地：</span>
-                            <span class="value">本拠地データ</span>
-                        </dd>
-                        <dd class="content-data">
-                            <span class="label">所属：</span>
-                            <span class="value">所属連盟データ</span>
-                        </dd>
+                    <div class="banner-rectangle-336">
+                        banner-reactangle-336*250
                     </div>
-                    <div class="column-right">
-                        <dd class="content-photo team">
-                            <img src="image/img_team_result_kindai.png">
-                        </dd>
+                    <div class="banner-rectangle-336">
+                        banner-reactangle-336*250
                     </div>
-                </dl>
-                <ul class="paging">
-                    <li class="current"><a href="">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                    <li><a href="">4</a></li>
-                    <li><a href="">5</a></li>
-                    <li class="arrow">
-                        <a href="">
-                            <i class="material-icons">
-                                chevron_right
-                            </i>
-                        </a>
-                    </li>
-                </ul>
+                </div>
             </div>
         </div>
     </main>
-    <footer class="site-footer">
-        <div class="site-footer-inner">
+    <footer class="l-footer__wrapper">
+        <div class="footer--grid">
             <div class="footer-logo">
                 <img src="./image/img_site_logo_nega.png">
                 <div class="footer-form">
@@ -248,7 +273,7 @@
                     <i class="material-icons">search</i>
                 </div>
             </div>
-            <div class="footer-info">
+            <div class="footer-info scorelake">
                 <dl class="info-list">
                     <dt class="list-index">Score Lake</dt>
                     <div class="list-link-wrapper">
@@ -284,5 +309,6 @@
         </div>
         <div class="credit">© 2022 Omyu Technology Co.,Ltd</div>
     </footer>
+    <script src="./js/common.js"></script>
 </body>
 </html>

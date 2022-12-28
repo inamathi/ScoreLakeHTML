@@ -1,39 +1,90 @@
 @use '../../common/var' as var;
 @use '../../common/mixin' as m;
 
-.splash-wrapper {
-    margin: auto;
-    .splash-title {
-        font-size: 1rem;
-        text-align: center;
-        color: var.$blue-grey;
-        font-weight: bold;
-        margin: 40px auto;
-    }
-    img {
-        width: 100%;
-        max-width: 360px;
-        object-fit: cover;
+
+@include m.mq(sps) {
+    .splash-wrapper {
         margin: auto;
-    }
-    .splash-form-text {
-        position: relative;
-        margin: 40px auto;
-        input[type="text"] {
+        .splash-title {
+            font-size: 1rem;
+            text-align: center;
+            color: var.$blue-grey;
+            font-weight: bold;
+            margin: 40px auto;
+        }
+        img {
             width: 100%;
-            position: relative;
-            background: var.$blue-grey-lighten-5;
-            border: solid 1px var.$blue-grey-lighten-4;
-            border-radius: 4px;
-            padding: 5px 10px;
+            max-width: 250px;
+            object-fit: cover;
+            margin: auto;
         }
-        .material-icons {
-            position: absolute;
-            top: 6px;
-            right: 6px;
+        .splash-form-text {
+            position: relative;
+            max-width: 90vw;
+            margin: 40px auto;
+            input[type="text"] {
+                width: 100%;
+                position: relative;
+                background: var.$blue-grey-lighten-5;
+                border: solid 1px var.$blue-grey-lighten-4;
+                border-radius: 4px;
+                padding: 5px 10px;
+            }
+            .material-icons {
+                position: absolute;
+                top: 6px;
+                right: 6px;
+            }
+        }
+        .description {
+            max-width: 90vw;
+            color: var.$blue-grey;
+            text-align: center;
+            line-height: 1.8;
+            margin: auto;
         }
     }
-    .description {
-        color: var.$blue-grey;
+}
+@include m.mq(pc) {
+    .splash-wrapper {
+        margin: auto;
+        .splash-title {
+            font-size: 1rem;
+            text-align: center;
+            color: var.$blue-grey;
+            font-weight: bold;
+            margin: 40px auto;
+        }
+        img {
+            width: 100%;
+            max-width: 360px;
+            object-fit: cover;
+            margin: auto;
+        }
+        .splash-form-text {
+            position: relative;
+            max-width: 25%;
+            margin: 40px auto;
+            input[type="text"] {
+                width: 100%;
+                position: relative;
+                background: var.$blue-grey-lighten-5;
+                border: solid 1px var.$blue-grey-lighten-4;
+                border-radius: 4px;
+                padding: 5px 10px;
+            }
+            .material-icons {
+                position: absolute;
+                top: 6px;
+                right: 6px;
+            }
+        }
+        .description {
+            max-width: 25%;
+            color: var.$blue-grey;
+            text-align: center;
+            line-height: 1.8;
+            margin: auto;
+        }
     }
 }

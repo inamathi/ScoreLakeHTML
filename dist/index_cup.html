@@ -21,20 +21,26 @@
     <link rel="stylesheet" href="css/style.css">
     <title>ScoreLake</title>
 </head>
-<body class="wrapper">
-    <header class="site-header">
-        <div class="site-header-inner">
-            <div class="header-logo">
-                <img src="./image/img_site_logo_nega.png">
-            </div>
-            <div class="header-form">
-                <input type="text" placeholder="">
-                <i class="material-icons">search</i>
-            </div>
+<body class="l-wrapper">
+    <header class="l-header__wrapper--flex" id="header">
+        <div class="header-logo">
+            <img src="./image/img_site_logo_nega.png">
         </div>
+        <div class="header-form">
+            <input type="text" placeholder="">
+            <i class="material-icons">search</i>
+        </div>
+        <ul class="header-sharebtn">
+            <li>
+                <a href=""><div class="c-mask--twitter"></div></a>
+            </li>
+            <li>
+                <a href=""><div class="c-mask--facebook"></div></a>
+            </li>
+        </ul>
     </header>
-    <nav class="site-gnav">
-        <ul class="gnav-wrapper">
+    <nav class="l-gnav">
+        <ul class="l-gnav__wrapper">
             <li class="gnav-item"><a href="index.html">すべて</a></li>
             <li class="gnav-item"><a href="index_team.html">チーム</a></li>
             <li class="gnav-item"><a href="index_player.html">選手</a></li>
@@ -42,197 +48,281 @@
             <li class="gnav-item"><a href="index_stadium.html">球場</a></li>
         </ul>
     </nav>
-    <main class="site-main">
-        <div class="site-main-container">
-            <div class="topix-container">
-                <h2 class="heading normal">開催中</h2>
-                <ul class="topix-wrapper">
+    <main class="l-main__result">
+        <!-- 開催中の大会 -->
+        <div class="l-datablock__wrapper--through">
+            <div class="l-datablock__content">
+                <h2 class="c-heading--main">開催中の大会</h2>
+                <ul class="p-topix__wrapper">
                     <li class="topix-item--top">
-                        <img class="item-img" src="./image/img_cup_dummy.png" />
+                        <img class="item-img" src="./image/img_cup_dummy01.png" />
                         <p class="item-title">関西六大学春季リーグ戦</p>
                         <p class="item-subtitle">首位：大阪商業大</p>
                         <p class="item-subtitle--add">本日開催：２試合</p>
                     </li>
-                    <li class="topix-item--top"></li>
-                    <li class="topix-item--top"></li>
-                    <li class="topix-item--top"></li>
-                    <li class="topix-item--top"></li>
-                </ul>
-            </div>
-            <!-- Pickup Cups-->
-            <div class="topix-container">
-                <h2 class="heading normal">PICKUP CUPS</h2>
-                <ul class="topix-wrapper">
                     <li class="topix-item--top">
-                        <img class="item-img" src="./image/img_cup_pickup_dummy.png" />
-                        <p class="item-title">第５２JABA東北大会</p>
-                        <p class="item-subtitle">優勝：東北大学（勝点５）</p>
-                        <p class="item-subtitle--add">終了</p>
+                        <img class="item-img" src="./image/img_cup_dummy02.png" />
+                        <p class="item-title">関西六大学春季リーグ戦</p>
+                        <p class="item-subtitle">首位：大阪商業大</p>
+                        <p class="item-subtitle--add">本日開催：２試合</p>
                     </li>
-                    <li class="topix-item--top"></li>
-                    <li class="topix-item--top"></li>
-                    <li class="topix-item--top"></li>
-                    <li class="topix-item--top"></li>
-                </ul>　
-            </div>
-            <!-- 大会 -->
-            <div class="results-list team">
-                <h2 class="heading normal">大会</h2>
-                <div class="split">
-                    <div class="column-content">
-                        <dl class="cup-prof">
-                            <dt class="cup-title soc">
-                                令和４年度春季近畿地区社会人野球大会
-                            </dt>
-                            <div>
-                                <dd class="content-data">
-                                    <span class="label">大会期間：</span>
-                                    <span class="value">22年5月21日（土）〜5月29日（日）</span>
-                                </dd>
-                                <dd class="content-data">
-                                    <span class="label">球場：</span>
-                                    <span class="value">紀三井寺運動公園野球場</span>
-                                </dd>
-                                <div class="content-status">
-                                    <dt class="content-status-title">
-                                        開催中
-                                    </dt>
-                                    <dd class="content-status-data">
-                                        実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル
-                                    </dd>
-                                </div>
-                            </div>
-                        </dl>
-                        <dl class="cup-prof">
-                            <dt class="cup-title unv">
-                                令和４年度春季近畿連盟大会
-                            </dt>
-                            <div>
-                                <dd class="content-data">
-                                    <span class="label">大会期間：</span>
-                                    <span class="value">22年5月21日（土）〜5月29日（日）</span>
-                                </dd>
-                                <dd class="content-data">
-                                    <span class="label">球場：</span>
-                                    <span class="value">紀三井寺運動公園野球場</span>
-                                </dd>
-                                <div class="content-status">
-                                    <dt class="content-status-title">
-                                        開催中
-                                    </dt>
-                                    <dd class="content-status-data">
-                                        実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル
-                                    </dd>
-                                </div>
-                            </div>
-                        </dl>
-                        <dl class="cup-prof">
-                            <dt class="cup-title hs">
-                                令和４年度春季近畿地区高等学校大会
-                            </dt>
-                            <div>
-                                <dd class="content-data">
-                                    <span class="label">大会期間：</span>
-                                    <span class="value">22年5月21日（土）〜5月29日（日）</span>
-                                </dd>
-                                <dd class="content-data">
-                                    <span class="label">球場：</span>
-                                    <span class="value">紀三井寺運動公園野球場</span>
-                                </dd>
-                                <div class="content-status">
-                                    <dt class="content-status-title">
-                                        開催中
-                                    </dt>
-                                    <dd class="content-status-data">
-                                        実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル
-                                    </dd>
-                                </div>
-                            </div>
-                        </dl>
-                        <dl class="cup-prof">
-                            <dt class="cup-title jhs">
-                                令和４年度春季近畿地区中学野球大会
-                            </dt>
-                            <div>
-                                <dd class="content-data">
-                                    <span class="label">大会期間：</span>
-                                    <span class="value">22年5月21日（土）〜5月29日（日）</span>
-                                </dd>
-                                <dd class="content-data">
-                                    <span class="label">球場：</span>
-                                    <span class="value">紀三井寺運動公園野球場</span>
-                                </dd>
-                                <div class="content-status">
-                                    <dt class="content-status-title">
-                                        開催中
-                                    </dt>
-                                    <dd class="content-status-data">
-                                        実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル
-                                    </dd>
-                                </div>
-                            </div>
-                        </dl>
-                        <dl class="cup-prof">
-                            <dt class="cup-title ps">
-                                令和４年度春季近畿地区小学生野球大会
-                            </dt>
-                            <div>　　　　　　　
-                                <dd class="content-data">
-                                    <span class="label">大会期間：</span>
-                                    <span class="value">22年5月21日（土）〜5月29日（日）</span>
-                                </dd>
-                                <dd class="content-data">
-                                    <span class="label">球場：</span>
-                                    <span class="value">紀三井寺運動公園野球場</span>
-                                </dd>
-                                <div class="content-status">
-                                    <dt class="content-status-title">
-                                        開催中
-                                    </dt>
-                                    <dd class="content-status-data">
-                                        実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル
-                                    </dd>
-                                </div>
-                            </div>
-                        </dl>
-                    </div>
-                    <div class="column-banner">
-                        <div class="banner-rectangle-336">
-                            banner-reactangle-336*250
-                        </div>
-                        <div class="banner-rectangle-336">
-                            banner-reactangle-336*250
-                        </div>
-                        <div class="banner-rectangle-336">
-                            banner-reactangle-336*250
-                        </div>
-                        <div class="banner-rectangle-336">
-                            banner-reactangle-336*250
-                        </div>
-                        <div class="banner-rectangle-336">
-                            banner-reactangle-336*250
-                        </div>
-                    </div>
-                </div>
-                <ul class="paging">
-                    <li class="current"><a href="">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                    <li><a href="">4</a></li>
-                    <li><a href="">5</a></li>
-                    <li class="arrow">
-                        <a href="">
-                            <i class="material-icons">
-                                chevron_right
-                            </i>
-                        </a>
+                    <li class="topix-item--top">
+                        <img class="item-img" src="./image/img_cup_dummy03.png" />
+                        <p class="item-title">関西六大学春季リーグ戦</p>
+                        <p class="item-subtitle">首位：大阪商業大</p>
+                        <p class="item-subtitle--add">本日開催：２試合</p>
+                    </li>
+                    <li class="topix-item--top">
+                        <img class="item-img" src="./image/img_cup_dummy04.png" />
+                        <p class="item-title">関西六大学春季リーグ戦</p>
+                        <p class="item-subtitle">首位：大阪商業大</p>
+                        <p class="item-subtitle--add">本日開催：２試合</p>
+                    </li>
+                    <li class="topix-item--top">
+                        <img class="item-img" src="./image/img_cup_dummy05.png" />
+                        <p class="item-title">関西六大学春季リーグ戦</p>
+                        <p class="item-subtitle">首位：大阪商業大</p>
+                        <p class="item-subtitle--add">本日開催：２試合</p>
                     </li>
                 </ul>
             </div>
         </div>
+        <!-- Pickup Cups-->
+        <div class="l-datablock__wrapper--through">
+            <div class="l-datablock__content">
+                <h2 class="c-heading--main">PICKUP 連盟紹介</h2>
+                <ul class="p-topix__wrapper">
+                    <li class="topix-item--top">
+                        <img class="item-img" src="./image/img_org_dummy01.png" />
+                        <p class="item-title">連盟名称など</p>
+                        <p class="item-subtitle">加盟チーム数など？</p>
+                        <p class="item-subtitle--add">秋季大会開催中</p>
+                    </li>
+                    <li class="topix-item--top">
+                        <img class="item-img" src="./image/img_org_dummy02.png" />
+                        <p class="item-title">連盟名称など</p>
+                        <p class="item-subtitle">加盟チーム数など？</p>
+                        <p class="item-subtitle--add">秋季大会開催中</p>
+                    </li>
+                    <li class="topix-item--top">
+                        <img class="item-img" src="./image/img_org_dummy03.png" />
+                        <p class="item-title">連盟名称など</p>
+                        <p class="item-subtitle">加盟チーム数など？</p>
+                        <p class="item-subtitle--add">秋季大会開催中</p>
+                    </li>
+                    <li class="topix-item--top">
+                        <img class="item-img" src="./image/img_org_dummy04.png" />
+                        <p class="item-title">連盟名称など</p>
+                        <p class="item-subtitle">加盟チーム数など？</p>
+                        <p class="item-subtitle--add">秋季大会開催中</p>
+                    </li>
+                    <li class="topix-item--top">
+                        <img class="item-img" src="./image/img_org_dummy05.png" />
+                        <p class="item-title">連盟名称など</p>
+                        <p class="item-subtitle">加盟チーム数など？</p>
+                        <p class="item-subtitle--add">秋季大会開催中</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 検索結果（大会） -->
+        <div class="l-datablock__wrapper--through">
+            <h2 class="c-heading--main">大会</h2>
+            <div class="l-split__column">
+                <div class="column-contents">
+                    <div class="l-split__column border">
+                        <dl class="p-list-content--cup">
+                            <dt class="content-title">
+                                大会名
+                            </dt>
+                            <dd class="content-data">
+                                <span class="label">開催期間：</span>
+                                <span class="value">◯◯月◯◯日（◯）〜 ◯◯月◯◯日（◯）</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">開催地：</span>
+                                <span class="value">開催地データ</span>
+                            </dd>
+                            <div class="content-status">
+                                <dt class="content-status-title">
+                                    開催中
+                                </dt>
+                                <dd class="content-status-data">
+                                    実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル
+                                </dd>
+                            </div>
+                        </dl>
+                        <div class="c-photo--index">
+                            <img src="./image/img_cup_dummy06.png">
+                        </div>
+                    </div>
+                    <div class="l-split__column border">
+                        <dl class="p-list-content--cup">
+                            <dt class="content-title">
+                                大会名
+                            </dt>
+                            <dd class="content-data">
+                                <span class="label">開催期間：</span>
+                                <span class="value">◯◯月◯◯日（◯）〜 ◯◯月◯◯日（◯）</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">開催地：</span>
+                                <span class="value">開催地データ</span>
+                            </dd>
+                            <div class="content-status">
+                                <dt class="content-status-title">
+                                    開催中
+                                </dt>
+                                <dd class="content-status-data">
+                                    実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル
+                                </dd>
+                            </div>
+                        </dl>
+                        <div class="c-photo--index">
+                            <img src="./image/img_cup_dummy01.png">
+                        </div>
+                    </div>
+                    <div class="l-split__column border">
+                        <dl class="p-list-content--cup">
+                            <dt class="content-title">
+                                大会名
+                            </dt>
+                            <dd class="content-data">
+                                <span class="label">開催期間：</span>
+                                <span class="value">◯◯月◯◯日（◯）〜 ◯◯月◯◯日（◯）</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">開催地：</span>
+                                <span class="value">開催地データ</span>
+                            </dd>
+                            <div class="content-status">
+                                <dt class="content-status-title">
+                                    開催中
+                                </dt>
+                                <dd class="content-status-data">
+                                    実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル
+                                </dd>
+                            </div>
+                        </dl>
+                        <div class="c-photo--index">
+                            <img src="./image/img_cup_dummy02.png">
+                        </div>
+                    </div>
+                    <div class="l-split__column border">
+                        <dl class="p-list-content--cup">
+                            <dt class="content-title">
+                                大会名
+                            </dt>
+                            <dd class="content-data">
+                                <span class="label">開催期間：</span>
+                                <span class="value">◯◯月◯◯日（◯）〜 ◯◯月◯◯日（◯）</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">開催地：</span>
+                                <span class="value">開催地データ</span>
+                            </dd>
+                            <div class="content-status">
+                                <dt class="content-status-title">
+                                    開催中
+                                </dt>
+                                <dd class="content-status-data">
+                                    実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル
+                                </dd>
+                            </div>
+                        </dl>
+                        <div class="c-photo--index">
+                            <img src="./image/img_cup_dummy03.png">
+                        </div>
+                    </div>
+                    <div class="l-split__column border">
+                        <dl class="p-list-content--cup">
+                            <dt class="content-title">
+                                大会名
+                            </dt>
+                            <dd class="content-data">
+                                <span class="label">開催期間：</span>
+                                <span class="value">◯◯月◯◯日（◯）〜 ◯◯月◯◯日（◯）</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">開催地：</span>
+                                <span class="value">開催地データ</span>
+                            </dd>
+                            <div class="content-status">
+                                <dt class="content-status-title">
+                                    開催中
+                                </dt>
+                                <dd class="content-status-data">
+                                    実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル
+                                </dd>
+                            </div>
+                        </dl>
+                        <div class="c-photo--index">
+                            <img src="./image/img_cup_dummy04.png">
+                        </div>
+                    </div>
+                    <div class="l-split__column border">
+                        <dl class="p-list-content--cup">
+                            <dt class="content-title">
+                                大会名
+                            </dt>
+                            <dd class="content-data">
+                                <span class="label">開催期間：</span>
+                                <span class="value">◯◯月◯◯日（◯）〜 ◯◯月◯◯日（◯）</span>
+                            </dd>
+                            <dd class="content-data">
+                                <span class="label">開催地：</span>
+                                <span class="value">開催地データ</span>
+                            </dd>
+                            <div class="content-status">
+                                <dt class="content-status-title">
+                                    開催中
+                                </dt>
+                                <dd class="content-status-data">
+                                    実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル
+                                </dd>
+                            </div>
+                        </dl>
+                        <div class="c-photo--index">
+                            <img src="./image/img_cup_dummy05.png">
+                        </div>
+                    </div>
+                    <ul class="c-paging">
+                        <li class="current"><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li class="arrow">
+                            <a href="">
+                                <i class="material-icons">
+                                    chevron_right
+                                </i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="column-banner">
+                    <div class="banner-rectangle-336">
+                        banner-reactangle-336*250
+                    </div>
+                    <div class="banner-rectangle-336">
+                        banner-reactangle-336*250
+                    </div>
+                    <div class="banner-rectangle-336">
+                        banner-reactangle-336*250
+                    </div>
+                    <div class="banner-rectangle-336">
+                        banner-reactangle-336*250
+                    </div>
+                    <div class="banner-rectangle-336">
+                        banner-reactangle-336*250
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer class="site-footer">
-        <div class="site-footer-inner">
+    <footer class="l-footer__wrapper">
+        <div class="footer--grid">
             <div class="footer-logo">
                 <img src="./image/img_site_logo_nega.png">
                 <div class="footer-form">
@@ -240,7 +330,7 @@
                     <i class="material-icons">search</i>
                 </div>
             </div>
-            <div class="footer-info">
+            <div class="footer-info scorelake">
                 <dl class="info-list">
                     <dt class="list-index">Score Lake</dt>
                     <div class="list-link-wrapper">
@@ -276,5 +366,6 @@
         </div>
         <div class="credit">© 2022 Omyu Technology Co.,Ltd</div>
     </footer>
+    <script src="./js/common.js"></script>
 </body>
 </html>

@@ -1,0 +1,105 @@
+@use '../common/var' as var;
+@use '../common/mixin' as m;
+/* =================================================================
+====================================================================
+================================================================= */
+@include m.mq(sps) {
+    .l {
+        &-gnav {
+            position: relative;
+            width: 100%;
+            background: var.$white;
+            padding: 0 5vw;
+            margin: auto;
+            top: 120px;
+            &__wrapper {
+                display: flex;
+                justify-content: center;
+                column-gap: 20px;
+                .gnav-item {
+                    a {
+                        white-space: nowrap;
+                        text-align: center;
+                        font-weight: bold;
+                        padding: 10px 5px;
+                        color: var.$teal-darken-4;
+                        border-bottom: 4px solid var.$blue-grey-lighten-5;
+                        color: inherit;
+                        &:link,
+                        &:visited {
+                            transition: all 0.0s ease;
+                            color: var.$light-blue;
+                        }
+                        &:hover {
+                            text-decoration: none;
+                            border-bottom: solid 4px var.$blue-darken-4;
+                            color: var.$blue-darken-4;
+                            transition: all 0.3s ease;
+                        }
+                    }
+                    &.current {
+                        color:  var.$blue-darken-3;
+                         a {
+                                 &:link,
+                                 &:visited {
+                                 border-bottom: 4px solid var.$blue-darken-4;
+                                 color: var.$blue-darken-4;
+                             }
+                        }
+                     }
+                }
+            }
+        }
+    }
+}
+/* =================================================================
+====================================================================
+================================================================= */
+@include m.mq(pc) {
+    .l {
+        &-gnav {
+            position: relative;
+            width: 100%;
+            background: var.$white;
+            padding: 0 5vw;
+            margin: auto;
+            top: 120px;
+            &__wrapper {
+                display: flex;
+                justify-content: center;
+                column-gap: 60px;
+                .gnav-item {
+                    a {
+                        text-align: center;
+                        font-weight: bold;
+                        padding: 10px;
+                        color: var.$teal-darken-4;
+                        border-bottom: 4px solid var.$blue-grey-lighten-5;
+                        color: inherit;
+                        &:link,
+                        &:visited {
+                            transition: all 0.0s ease;
+                            color: var.$light-blue;
+                        }
+                        &:hover {
+                            text-decoration: none;
+                            border-bottom: solid 4px var.$blue-darken-4;
+                            color: var.$blue-darken-4;
+                            transition: all 0.3s ease;
+                        }
+                    }
+                    &.current {
+                        color:  var.$blue-darken-3;
+                         a {
+                                 &:link,
+                                 &:visited {
+                                 border-bottom: 4px solid var.$blue-darken-4;
+                                 color: var.$blue-darken-4;
+                             }
+                        }
+                     }
+                }
+            }
+        }
+    }
+}

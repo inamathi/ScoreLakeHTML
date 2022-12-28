@@ -21,20 +21,26 @@
     <link rel="stylesheet" href="css/style.css">
     <title>ScoreLake</title>
 </head>
-<body class="wrapper">
-    <header class="site-header">
-        <div class="site-header-inner">
-            <div class="header-logo">
-                <img src="./image/img_site_logo_nega.png">
-            </div>
-            <div class="header-form">
-                <input type="text" placeholder="">
-                <i class="material-icons">search</i>
-            </div>
+<body class="l-wrapper">
+    <header class="l-header__wrapper--flex" id="header">
+        <div class="header-logo">
+            <img src="./image/img_site_logo_nega.png">
         </div>
+        <div class="header-form">
+            <input type="text" placeholder="">
+            <i class="material-icons">search</i>
+        </div>
+        <ul class="header-sharebtn">
+            <li>
+                <a href=""><div class="c-mask--twitter"></div></a>
+            </li>
+            <li>
+                <a href=""><div class="c-mask--facebook"></div></a>
+            </li>
+        </ul>
     </header>
-    <nav class="site-gnav">
-        <ul class="gnav-wrapper">
+    <nav class="l-gnav">
+        <ul class="l-gnav__wrapper">
             <li class="gnav-item current"><a href="index.html">すべて</a></li>
             <li class="gnav-item"><a href="index_team.html">チーム</a></li>
             <li class="gnav-item"><a href="index_player.html">選手</a></li>
@@ -42,288 +48,387 @@
             <li class="gnav-item"><a href="index_stadium.html">球場</a></li>
         </ul>
     </nav>
-    <main class="site-main">
-        <div class="site-main-container">
-            <div class="topix-container">
-                <h2 class="heading normal">TOPIX</h2>
-                <ul class="topix-wrapper">
+    <main class="l-main__result">
+        <div class="l-datablock__wrapper--through">
+            <div class="l-datablock__content p-results">
+                    <h2 class="c-heading--main">TOPIX</h2>
+                    <ul class="p-topix__wrapper">
+                        <li class="topix-item--top">
+                            <img class="item-img" src="./image/img_cup_dummy03.png" />
+                            <p class="item-title">チーム名・選手名</p>
+                            <p class="item-subtitle">チーム名・選手名補足情報</p>
+                            <p class="item-subtitle--add">経歴・戦績・表彰など</p>
+                        </li>
+                        <li class="topix-item--top">
+                            <img class="item-img" src="./image/img_cup_dummy01.png" />
+                            <p class="item-title">チーム名・選手名</p>
+                            <p class="item-subtitle">チーム名・選手名補足情報</p>
+                            <p class="item-subtitle--add">経歴・戦績・表彰など</p>
+                        </li>
+                        <li class="topix-item--top">
+                            <img class="item-img" src="./image/img_cup_dummy02.png" />
+                            <p class="item-title">チーム名・選手名</p>
+                            <p class="item-subtitle">チーム名・選手名補足情報</p>
+                            <p class="item-subtitle--add">経歴・戦績・表彰など</p>
+                        </li>
+                    </ul>
+            </div>
+            <div class="l-datablock__content">
+                <h2 class="c-heading--main">PICKUP PLAYER</h2>
+                <ul class="p-topix__wrapper">
                     <li class="topix-item--top">
-                        <img class="item-img" src="./image/img_team_logo_nissei.png" />
+                        <img class="item-img" src="./image/img_player_dummy01.png" />
                         <p class="item-title">チーム名・選手名</p>
                         <p class="item-subtitle">チーム名・選手名補足情報</p>
                         <p class="item-subtitle--add">経歴・戦績・表彰など</p>
                     </li>
-                    <li class="topix-item--top"></li>
-                    <li class="topix-item--top"></li>
-                </ul>
-            </div>
-            <div class="topix-container">
-                <h2 class="heading normal">PICKUP PLAYER</h2>
-                <ul class="topix-wrapper">
                     <li class="topix-item--top">
-                        <img class="item-img" src="./image/img_team_logo_nissei.png" />
+                        <img class="item-img" src="./image/img_player_dummy02.png" />
                         <p class="item-title">チーム名・選手名</p>
                         <p class="item-subtitle">チーム名・選手名補足情報</p>
                         <p class="item-subtitle--add">経歴・戦績・表彰など</p>
                     </li>
-                    <li class="topix-item--top"></li>
-                    <li class="topix-item--top"></li>
-                </ul>
-            </div>
-            <div class="topix-container">
-                <h2 class="heading normal">PICKUP GAMES</h2>
-                <ul class="topix-wrapper">
                     <li class="topix-item--top">
-                        <img class="item-img" src="./image/img_team_logo_nissei.png" />
+                        <img class="item-img" src="./image/img_player_dummy03.png" />
                         <p class="item-title">チーム名・選手名</p>
                         <p class="item-subtitle">チーム名・選手名補足情報</p>
                         <p class="item-subtitle--add">経歴・戦績・表彰など</p>
                     </li>
-                    <li class="topix-item--top"></li>
-                    <li class="topix-item--top"></li>
                 </ul>
             </div>
-            <!-- チーム -->
-            <div class="results-list team">
-                <h2 class="heading normal">チーム</h2>
-                <dl class="list-content">
-                    <dt class="content-title">
-                        チーム名<span class="title-add">（地域・カテゴリ）</span>
-                    </dt>
-                    <dd class="content-data">
-                        <span class="label">読み方：</span>
-                        <span class="value">読み方データ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">略称：</span>
-                        <span class="value">略称データ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">カテゴリ：</span>
-                        <span class="value">カテゴリデータ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">本拠地：</span>
-                        <span class="value">本拠地データ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">所属：</span>
-                        <span class="value">所属連盟データ</span>
-                    </dd>
-                </dl>
-                <dl class="list-content">
-                    <dt class="content-title">
-                        チーム名<span class="title-add">（地域・カテゴリ）</span>
-                    </dt>
-                    <dd class="content-data">
-                        <span class="label">読み方：</span>
-                        <span class="value">読み方データ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">略称：</span>
-                        <span class="value">略称データ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">カテゴリ：</span>
-                        <span class="value">カテゴリデータ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">本拠地：</span>
-                        <span class="value">本拠地データ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">所属：</span>
-                        <span class="value">所属連盟データ</span>
-                    </dd>
-                </dl>
-                <dl class="list-content">
-                    <dt class="content-title">
-                        チーム名<span class="title-add">（地域・カテゴリ）</span>
-                    </dt>
-                    <dd class="content-data">
-                        <span class="label">読み方：</span>
-                        <span class="value">読み方データ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">略称：</span>
-                        <span class="value">略称データ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">カテゴリ：</span>
-                        <span class="value">カテゴリデータ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">本拠地：</span>
-                        <span class="value">本拠地データ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">所属：</span>
-                        <span class="value">所属連盟データ</span>
-                    </dd>
-                </dl>
-                <button class="results-normal">その他チーム</button>
+            <div class="l-datablock__content">
+                <h2 class="c-heading--main">PICKUP GAMES</h2>
+                <ul class="p-topix__wrapper">
+                    <li class="topix-item--top">
+                        <img class="item-img" src="./image/img_cup_dummy04.png" />
+                        <p class="item-title">チーム名・選手名</p>
+                        <p class="item-subtitle">チーム名・選手名補足情報</p>
+                        <p class="item-subtitle--add">経歴・戦績・表彰など</p>
+                    </li>
+                    <li class="topix-item--top">
+                        <img class="item-img" src="./image/img_cup_dummy05.png" />
+                        <p class="item-title">チーム名・選手名</p>
+                        <p class="item-subtitle">チーム名・選手名補足情報</p>
+                        <p class="item-subtitle--add">経歴・戦績・表彰など</p>
+                    </li>
+                    <li class="topix-item--top">
+                        <img class="item-img" src="./image/img_cup_dummy06.png" />
+                        <p class="item-title">チーム名・選手名</p>
+                        <p class="item-subtitle">チーム名・選手名補足情報</p>
+                        <p class="item-subtitle--add">経歴・戦績・表彰など</p>
+                    </li>
+                </ul>
             </div>
-            <!-- 選手 -->
-            <div class="results-list player">
-                <h2 class="heading normal">選手</h2>
-                <dl class="list-content">
-                    <dt class="content-title">
-                        選手名
-                    </dt>
-                    <dd class="content-data">
-                        <span class="label">読み方：</span>
-                        <span class="value">読み方データ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">英字：</span>
-                        <span class="value">written via English</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">所属：</span>
-                        <span class="value">所属データ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">ポジション：</span>
-                        <span class="value">ポジションデータ</span>
-                    </dd>
-                    <dt class="content-title-add">
-                        日付・大会名等
-                    </dt>
-                    <dd class="content-data">
-                        <span class="value-add">実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル</span>
-                    </dd>
-                </dl>
-                <dl class="list-content">
-                    <dt class="content-title">
-                        選手名
-                    </dt>
-                    <dd class="content-data">
-                        <span class="label">読み方：</span>
-                        <span class="value">読み方データ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">英字：</span>
-                        <span class="value">written via English</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">所属：</span>
-                        <span class="value">所属データ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">ポジション：</span>
-                        <span class="value">ポジションデータ</span>
-                    </dd>
-                    <dt class="content-title-add">
-                        日付・大会名等
-                    </dt>
-                    <dd class="content-data">
-                        <span class="value-add">実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル</span>
-                    </dd>
-                </dl>
-                <dl class="list-content">
-                    <dt class="content-title">
-                        選手名
-                    </dt>
-                    <dd class="content-data">
-                        <span class="label">読み方：</span>
-                        <span class="value">読み方データ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">英字：</span>
-                        <span class="value">written via English</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">所属：</span>
-                        <span class="value">所属データ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">ポジション：</span>
-                        <span class="value">ポジションデータ</span>
-                    </dd>
-                    <dt class="content-title-add">
-                        日付・大会名等
-                    </dt>
-                    <dd class="content-data">
-                        <span class="value-add">実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル</span>
-                    </dd>
-                </dl>
-            </div>
-            <!-- 大会・試合 -->
-            <div class="results-list cup">
-                <h2 class="heading normal">大会・試合</h2>
-                <dl class="list-content">
-                    <dt class="content-title">
-                        大会名
-                    </dt>
-                    <dd class="content-data">
-                        <span class="label">開催期間：</span>
-                        <span class="value">◯◯月◯◯日（◯）〜 ◯◯月◯◯日（◯）</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">開催地：</span>
-                        <span class="value">開催地データ</span>
-                    </dd>
-                    <div class="content-status">
-                        <dt class="content-status-title">
-                            開催中
-                        </dt>
-                        <dd class="content-status-data">
-                            実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル
-                        </dd>
+        </div>
+        <!-- 検索結果 -->
+        <div class="l-datablock__wrapper--through">
+            <h2 class="c-heading--main">チーム</h2>
+            <div class="l-split__column">
+                <div class="column-contents">
+                    <!-- チーム -->
+                    <div class="l-datablock__wrapper--through">
+                        <div class="l-split__column border">
+                            <dl class="p-list-content--team">
+                                <dt class="content-title">
+                                    チーム名<span class="title-add">（地域・カテゴリ）</span>
+                                </dt>
+                                <dd class="content-data">
+                                    <span class="label">読み方：</span>
+                                    <span class="value">読み方データ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">略称：</span>
+                                    <span class="value">略称データ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">カテゴリ：</span>
+                                    <span class="value">カテゴリデータ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">本拠地：</span>
+                                    <span class="value">本拠地データ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">所属：</span>
+                                    <span class="value">所属連盟データ</span>
+                                </dd>
+                            </dl>
+                            <div class="c-photo--index">
+                                <img src="./image/img_team_dummy01.png">
+                            </div>
+                        </div>
+                        <div class="l-split__column border">
+                            <dl class="p-list-content--team">
+                                <dt class="content-title">
+                                    チーム名<span class="title-add">（地域・カテゴリ）</span>
+                                </dt>
+                                <dd class="content-data">
+                                    <span class="label">読み方：</span>
+                                    <span class="value">読み方データ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">略称：</span>
+                                    <span class="value">略称データ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">カテゴリ：</span>
+                                    <span class="value">カテゴリデータ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">本拠地：</span>
+                                    <span class="value">本拠地データ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">所属：</span>
+                                    <span class="value">所属連盟データ</span>
+                                </dd>
+                            </dl>
+                            <div class="c-photo--index">
+                                <img src="./image/img_team_dummy02.png">
+                            </div>
+                        </div>
+                        <div class="l-split__column border">
+                            <dl class="p-list-content--team">
+                                <dt class="content-title">
+                                    チーム名<span class="title-add">（地域・カテゴリ）</span>
+                                </dt>
+                                <dd class="content-data">
+                                    <span class="label">読み方：</span>
+                                    <span class="value">読み方データ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">略称：</span>
+                                    <span class="value">略称データ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">カテゴリ：</span>
+                                    <span class="value">カテゴリデータ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">本拠地：</span>
+                                    <span class="value">本拠地データ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">所属：</span>
+                                    <span class="value">所属連盟データ</span>
+                                </dd>
+                            </dl>
+                            <div class="c-photo--index">
+                                <img src="./image/img_team_dummy03.png">
+                            </div>
+                        </div>
                     </div>
-                </dl>
-            </div>
-            <!-- 連盟 -->
-            <div class="results-list federation">
-                <h2 class="heading normal">連盟</h2>
-                <dl class="list-content">
-                    <dt class="content-title">
-                        連盟名称
-                    </dt>
-                    <dd class="content-data">
-                        <span class="label">開催期間：</span>
-                        <span class="value">◯◯月◯◯日（◯）〜 ◯◯月◯◯日（◯）</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">開催地：</span>
-                        <span class="value">開催地データ</span>
-                    </dd>
-                    <div class="content-status">
-                        <dt class="content-status-title">
-                            開催中
-                        </dt>
-                        <dd class="content-status-data">
-                            実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル
-                        </dd>
+                    <button class="c-button__content-list--normal">その他チーム</button>
+                    <!-- 選手 -->
+                    <div class="l-datablock__wrapper--through u-content-gap-row">
+                        <h2 class="c-heading--main">選手</h2>
+                        <div class="l-split__column border">
+                            <dl class="p-list-content--player">
+                                <dt class="content-title">
+                                    選手名
+                                </dt>
+                                <dd class="content-data">
+                                    <span class="label">読み方：</span>
+                                    <span class="value">読み方データ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">英字：</span>
+                                    <span class="value">written via English</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">所属：</span>
+                                    <span class="value">所属データ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">ポジション：</span>
+                                    <span class="value">ポジションデータ</span>
+                                </dd>
+                                <dt class="content-title-add">
+                                    日付・大会名等
+                                </dt>
+                                <dd class="content-data">
+                                    <span class="value-add">実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル</span>
+                                </dd>
+                            </dl>
+                            <div class="c-photo--index">
+                                <img src="./image/img_player_dummy05.png">
+                            </div>
+                        </div>
+                        <div class="l-split__column border">
+                            <dl class="p-list-content--player">
+                                <dt class="content-title">
+                                    選手名
+                                </dt>
+                                <dd class="content-data">
+                                    <span class="label">読み方：</span>
+                                    <span class="value">読み方データ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">英字：</span>
+                                    <span class="value">written via English</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">所属：</span>
+                                    <span class="value">所属データ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">ポジション：</span>
+                                    <span class="value">ポジションデータ</span>
+                                </dd>
+                                <dt class="content-title-add">
+                                    日付・大会名等
+                                </dt>
+                                <dd class="content-data">
+                                    <span class="value-add">実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル</span>
+                                </dd>
+                            </dl>
+                            <div class="c-photo--index">
+                                <img src="./image/img_player_dummy06.png">
+                            </div>
+                        </div>
+                        <div class="l-split__column border">
+                            <dl class="p-list-content--player">
+                                <dt class="content-title">
+                                    選手名
+                                </dt>
+                                <dd class="content-data">
+                                    <span class="label">読み方：</span>
+                                    <span class="value">読み方データ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">英字：</span>
+                                    <span class="value">written via English</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">所属：</span>
+                                    <span class="value">所属データ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">ポジション：</span>
+                                    <span class="value">ポジションデータ</span>
+                                </dd>
+                                <dt class="content-title-add">
+                                    日付・大会名等
+                                </dt>
+                                <dd class="content-data">
+                                    <span class="value-add">実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル</span>
+                                </dd>
+                            </dl>
+                            <div class="c-photo--index">
+                                <img src="./image/img_player_dummy07.png">
+                            </div>
+                        </div>
                     </div>
-                </dl>
-            </div>
-            <!-- チーム -->
-            <div class="results-list stadium">
-                <h2 class="heading normal">球場</h2>
-                <dl class="list-content">
-                    <dt class="content-title">
-                        球場名称
-                    </dt>
-                    <dd class="content-data">
-                        <span class="label">主な使用チーム：</span>
-                        <span class="value">主な使用チームデータ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">略称：</span>
-                        <span class="value">略称データ</span>
-                    </dd>
-                    <dd class="content-data">
-                        <span class="label">所在：</span>
-                        <span class="value">球場所在地データ住所 xxxxxxx-xxx-xxxx</span>
-                    </dd>
-                </dl>
-                <button class="results-normal">その他チーム</button>
+                    <!-- 大会・試合 -->
+                    <div class="l-datablock__wrapper--through u-content-gap-row">
+                        <h2 class="c-heading--main">大会・試合</h2>
+                        <div class="l-split__column border">
+                            <dl class="p-list-content--cup">
+                                <dt class="content-title">
+                                    大会名
+                                </dt>
+                                <dd class="content-data">
+                                    <span class="label">開催期間：</span>
+                                    <span class="value">◯◯月◯◯日（◯）〜 ◯◯月◯◯日（◯）</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">開催地：</span>
+                                    <span class="value">開催地データ</span>
+                                </dd>
+                                <div class="content-status">
+                                    <dt class="content-status-title">
+                                        開催中
+                                    </dt>
+                                    <dd class="content-status-data">
+                                        実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル
+                                    </dd>
+                                </div>
+                            </dl>
+                            <div class="c-photo--index">
+                                <img src="./image/img_stadium_dummy05.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 連盟 -->
+                    <div class="l-datablock__wrapper--through u-content-gap-row">
+                        <h2 class="c-heading--main">連盟</h2>
+                        <div class="l-split__column border">
+                            <dl class="p-list-content--org">
+                                <dt class="content-title">
+                                    連盟名称
+                                </dt>
+                                <dd class="content-data">
+                                    <span class="label">開催期間：</span>
+                                    <span class="value">◯◯月◯◯日（◯）〜 ◯◯月◯◯日（◯）</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">開催地：</span>
+                                    <span class="value">開催地データ</span>
+                                </dd>
+                                <div class="content-status">
+                                    <dt class="content-status-title">
+                                        開催中
+                                    </dt>
+                                    <dd class="content-status-data">
+                                        実績を表示。基本的にはテキスト流し込み。データ数分ddを増やしていくスタイル
+                                    </dd>
+                                </div>
+                            </dl>
+                            <div class="c-photo--index">
+                                <img src="./image/img_stadium_dummy06.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 球場 -->
+                    <div class="l-datablock__wrapper--through u-content-gap-row">
+                        <h2 class="c-heading--main">球場</h2>
+                        <div class="l-split__column border">
+                            <dl class="p-list-content--team">
+                                <dt class="content-title">
+                                    球場名称
+                                </dt>
+                                <dd class="content-data">
+                                    <span class="label">主な使用チーム：</span>
+                                    <span class="value">主な使用チームデータ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">略称：</span>
+                                    <span class="value">略称データ</span>
+                                </dd>
+                                <dd class="content-data">
+                                    <span class="label">所在：</span>
+                                    <span class="value">球場所在地データ住所 xxxxxxx-xxx-xxxx</span>
+                                </dd>
+                            </dl>
+                            <div class="c-photo--index">
+                                <img src="./image/img_stadium_dummy07.png">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="c-button__content-list--normal">その他チーム</button>
+                </div>
+                <div class="column-banner">
+                    <div class="banner-rectangle-336">
+                        banner-reactangle-336*250
+                    </div>
+                    <div class="banner-rectangle-336">
+                        banner-reactangle-336*250
+                    </div>
+                    <div class="banner-rectangle-336">
+                        banner-reactangle-336*250
+                    </div>
+                    <div class="banner-rectangle-336">
+                        banner-reactangle-336*250
+                    </div>
+                    <div class="banner-rectangle-336">
+                        banner-reactangle-336*250
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-    <footer class="site-footer">
-        <div class="site-footer-inner">
+    <footer class="l-footer__wrapper">
+        <div class="footer--grid">
             <div class="footer-logo">
                 <img src="./image/img_site_logo_nega.png">
                 <div class="footer-form">
@@ -331,15 +436,15 @@
                     <i class="material-icons">search</i>
                 </div>
             </div>
-            <div class="footer-info">
+            <div class="footer-info scorelake">
                 <dl class="info-list">
                     <dt class="list-index">Score Lake</dt>
                     <div class="list-link-wrapper">
-                        <dd class="list-link"><a href="">すべて</a></dd>
-                        <li class="gnav-item"><a href="index_team.html">チーム</a></li>
-                        <dd class="list-link"><a href="">選手</a></dd>
-                        <dd class="list-link"><a href="">大会・連盟</a></dd>
-                        <dd class="list-link"><a href="">球場</a></dd>
+                        <dd class="list-link"><a href="index.html">すべて</a></dd>
+                        <dd class="list-link"><a href="index_team.html">チーム</a></dd>
+                        <dd class="list-link"><a href="index_player.html">選手</a></dd>
+                        <dd class="list-link"><a href="index_cup.html">大会・連盟</a></dd>
+                        <dd class="list-link"><a href="index_stadium.html">球場</a></dd>
                     </div>
                 </dl>
             </div>
@@ -367,5 +472,6 @@
         </div>
         <div class="credit">© 2022 Omyu Technology Co.,Ltd</div>
     </footer>
+    <script src="./js/common.js"></script>
 </body>
 </html>

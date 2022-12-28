@@ -1,12 +1,25 @@
 @use '../common/var' as var;
 @use '../common/mixin' as m;
 
-.l {
-    &-main {
-        &__result {
-            background: var.$white;
-            padding: 100px 0;
-            column-gap: 40px;
+@include m.mq(sps){
+    .l {
+        &-main {
+            &__result {
+                background: var.$white;
+                padding: 120px 0 0;
+                column-gap: 40px;
+            }
+        }
+    }
+}
+@include m.mq(pc){
+    .l {
+        &-main {
+            &__result {
+                background: var.$white;
+                padding: 100px 0;
+                column-gap: 40px;
+            }
         }
     }
 }

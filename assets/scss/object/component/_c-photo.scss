@@ -1,20 +1,59 @@
 @use '../../common/var' as var;
 @use '../../common/mixin' as m;
-.c {
-    &-photo {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        border: solid 1px red;
-        &--player {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            column-gap: 20px;
-            row-gap: 20px;
-            margin-top: 20px;
-            .frame {
-                border: solid 1px var.$blue-grey-lighten-4;
+@include m.mq(sps) {
+    .c {
+        &-photo {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            &--player {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                column-gap: 20px;
+                row-gap: 20px;
+                margin-top: 20px;
+                .frame {
+                    border: solid 1px var.$blue-grey-lighten-3;
+                    padding: 5px;
+                }
+            }
+            &--index {
+                border: solid 1px var.$grey-lighten-3;
                 padding: 5px;
+                margin: 20px auto;
+                img {
+                    height: auto;
+                    max-height: 180px;
+                }
+            }
+        }
+    }
+}
+@include m.mq(pc) {
+    .c {
+        &-photo {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            &--player {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                column-gap: 20px;
+                row-gap: 20px;
+                margin-top: 20px;
+                .frame {
+                    border: solid 1px var.$blue-grey-lighten-3;
+                    padding: 5px;
+                }
+            }
+            &--index {
+                border: solid 1px var.$grey-lighten-3;
+                padding: 5px;
+                margin: 20px;
+                img {
+                    height: auto;
+                    max-height: 180px;
+                }
             }
         }
     }
